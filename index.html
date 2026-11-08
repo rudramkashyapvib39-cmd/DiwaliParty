@@ -1,0 +1,1596 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Diwali Filmy Wheel 🪔</title>
+<meta name="theme-color" content="#1a0a00">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪔</text></svg>">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Martian+Mono:wght@500;700&family=Yatra+One&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<style>
+/* ===== DIWALI DIWALI WHEEL — Mobile-first festive night ===== */
+:root{
+  --ink:#0c0600;
+  --plum:#1a0a00;
+  --plum2:#2e1400;
+  --gold:#ffc94a;
+  --gold2:#ffe28a;
+  --saffron:#ff8c1a;
+  --pink:#ff3d6e;
+  --violet:#9b2cff;
+  --cream:#fff6e8;
+  --mute:#c9a88a;
+  --good:#3dd68c;
+  --bad:#ff4d6d;
+  --line:rgba(255,200,80,.18);
+  --f-display:'Yatra One','Rozha One',Georgia,serif;
+  --f-body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:'Martian Mono',ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bot: env(safe-area-inset-bottom, 0px);
+  --safe-l: env(safe-area-inset-left, 0px);
+  --safe-r: env(safe-area-inset-right, 0px);
+}
+html,body{background:var(--ink);color:var(--cream);height:100%;}
+html{scroll-padding-top:var(--safe-top);}
+body{
+  font-family:var(--f-body);font-size:16px;line-height:1.4;
+  margin:0;padding:0;
+  padding-left:max(12px,var(--safe-l));
+  padding-right:max(12px,var(--safe-r));
+  min-height:100%;
+  min-height:100dvh;
+  background:
+    radial-gradient(ellipse 120% 80% at 50% -10%, #3a1800 0%, transparent 55%),
+    radial-gradient(ellipse 90% 60% at 100% 100%, #4a0c1a 0%, transparent 50%),
+    radial-gradient(ellipse 80% 50% at 0% 80%, #2a0a40 0%, transparent 45%),
+    linear-gradient(180deg, #0f0800 0%, #1a0a00 40%, #120600 100%);
+  background-attachment:fixed;
+  overflow-x:hidden;
+  -webkit-tap-highlight-color:transparent;
+  overscroll-behavior:none;
+}
+*{box-sizing:border-box}
+.display{font-family:var(--f-display);font-weight:400;letter-spacing:.02em}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.gold-text{
+  background:linear-gradient(180deg,#fff8d0 0%,var(--gold) 40%,#e89b1a 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 0 40px rgba(255,180,40,.35);
+}
+.glass{
+  background:linear-gradient(165deg,rgba(255,180,60,.12),rgba(80,20,0,.35));
+  border:1px solid var(--line);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-radius:1.25rem;
+  box-shadow:0 16px 50px -20px rgba(0,0,0,.85), inset 0 1px 0 rgba(255,220,120,.12);
+}
+
+/* Floating fireworks / sparkles layer */
+.beams{
+  position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;
+}
+.beams::before,.beams::after{
+  content:"";position:absolute;inset:-20%;
+  background:
+    radial-gradient(2px 2px at 20% 30%, #ffd700 0%, transparent 100%),
+    radial-gradient(2px 2px at 60% 70%, #ff6b35 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 80% 20%, #fff 0%, transparent 100%),
+    radial-gradient(2px 2px at 40% 80%, #ff3d6e 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 10% 60%, #9b2cff 0%, transparent 100%),
+    radial-gradient(2px 2px at 90% 50%, #ffc94a 0%, transparent 100%);
+  background-size:200px 200px;
+  animation:twinkle 8s linear infinite;
+  opacity:.7;
+}
+.beams::after{animation-delay:-4s;opacity:.45;transform:scale(1.3);}
+@keyframes twinkle{from{transform:translateY(0)}to{transform:translateY(-200px)}}
+
+/* Firecracker burst particles */
+.fireworks{
+  position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden;
+}
+.fw{
+  position:absolute;width:4px;height:4px;border-radius:50%;
+  animation:burst 2.8s ease-out infinite;
+  opacity:0;
+}
+@keyframes burst{
+  0%{transform:translate(0,0) scale(1);opacity:0}
+  8%{opacity:1}
+  100%{transform:translate(var(--tx),var(--ty)) scale(0);opacity:0}
+}
+
+/* Diya / lamp decorations */
+.diya-row{
+  display:flex;justify-content:center;gap:10px;pointer-events:none;
+  padding:6px 0;filter:drop-shadow(0 0 8px rgba(255,160,40,.6));
+}
+.diya{
+  font-size:1.35rem;animation:flicker 1.6s ease-in-out infinite alternate;
+  display:inline-block;
+}
+.diya:nth-child(2){animation-delay:.3s}
+.diya:nth-child(3){animation-delay:.6s}
+.diya:nth-child(4){animation-delay:.9s}
+.diya:nth-child(5){animation-delay:1.2s}
+@keyframes flicker{
+  0%{transform:scale(1) rotate(-3deg);filter:brightness(1)}
+  100%{transform:scale(1.12) rotate(3deg);filter:brightness(1.35)}
+}
+
+/* Buttons — bigger for mobile thumbs */
+.btn{
+  font-family:var(--f-body);font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  border-radius:999px;padding:.95rem 1.35rem;cursor:pointer;border:1px solid transparent;
+  transition:transform .15s,filter .15s,opacity .15s,background .15s;
+  display:inline-flex;align-items:center;justify-content:center;gap:.45rem;
+  line-height:1.1;font-size:.88rem;user-select:none;-webkit-tap-highlight-color:transparent;
+  min-height:48px;
+}
+.btn:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.1)}
+.btn:active:not(:disabled){transform:translateY(1px) scale(.97)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn:focus-visible,.chip:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,.tgl:focus-visible{
+  outline:2px solid var(--gold);outline-offset:3px;
+}
+.btn-gold{
+  background:linear-gradient(180deg,#ffe9a0,var(--gold) 50%,#d48a10);
+  color:#2a1400;
+  box-shadow:0 8px 28px -8px rgba(255,180,40,.75),inset 0 1px 0 rgba(255,255,255,.55);
+}
+.btn-pink{
+  background:linear-gradient(180deg,#ff7a9a,var(--pink) 55%,#c01040);
+  color:#fff;
+  box-shadow:0 8px 28px -8px rgba(255,60,100,.75),inset 0 1px 0 rgba(255,255,255,.35);
+}
+.btn-good{
+  background:linear-gradient(180deg,#5ef0b0,var(--good));
+  color:#032a1a;
+  box-shadow:0 8px 28px -10px rgba(61,214,140,.7);
+}
+.btn-bad{
+  background:linear-gradient(180deg,#ff8aa0,var(--bad));
+  color:#2a0008;
+}
+.btn-ghost{
+  background:rgba(255,180,60,.08);
+  border-color:var(--line);
+  color:var(--cream);
+}
+.btn-ghost:hover:not(:disabled){background:rgba(255,180,60,.16)}
+.btn-sm{padding:.6rem .95rem;font-size:.76rem;min-height:40px}
+.btn-xl{padding:1.2rem 1.8rem;font-size:1.05rem;min-height:56px;width:100%}
+
+.chip{
+  font-family:var(--f-body);font-weight:600;font-size:.86rem;
+  padding:.55rem .95rem;border-radius:999px;border:1px solid var(--line);
+  background:rgba(255,180,60,.07);color:var(--cream);cursor:pointer;
+  transition:all .15s;line-height:1.15;min-height:40px;
+}
+.chip:hover{background:rgba(255,180,60,.15)}
+.chip[aria-pressed="true"]{
+  background:linear-gradient(180deg,#ffe9a0,var(--gold));
+  color:#2a1400;border-color:transparent;
+  box-shadow:0 6px 18px -6px rgba(255,180,40,.7);
+}
+.chip:disabled{opacity:.4;cursor:not-allowed}
+
+.lbl{
+  font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mute);font-weight:500;
+}
+input[type=text],input[type=number],select,textarea{
+  background:rgba(20,8,0,.7);border:1px solid var(--line);color:var(--cream);
+  border-radius:.9rem;padding:.75rem .9rem;font-family:var(--f-body);font-size:1rem;
+  width:100%;min-width:0;min-height:48px;
+}
+textarea{resize:vertical;min-height:3rem}
+input::placeholder,textarea::placeholder{color:#9a7a5a}
+select option{background:#1a0a00;color:var(--cream)}
+
+.tgl{
+  width:2.9rem;height:1.65rem;border-radius:999px;
+  background:rgba(255,180,60,.15);border:1px solid var(--line);
+  position:relative;cursor:pointer;flex:none;transition:background .2s;
+}
+.tgl::after{
+  content:"";position:absolute;top:2px;left:2px;
+  width:1.25rem;height:1.25rem;border-radius:50%;background:#fff;
+  transition:transform .2s;box-shadow:0 1px 4px rgba(0,0,0,.4);
+}
+.tgl[aria-checked="true"]{background:var(--saffron)}
+.tgl[aria-checked="true"]::after{transform:translateX(1.2rem)}
+
+.pill{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;
+  text-transform:uppercase;padding:.35rem .7rem;border-radius:999px;
+  border:1px solid var(--line);background:rgba(255,180,60,.08);
+}
+.d-easy{color:#7ff0c0;border-color:rgba(61,214,140,.45)}
+.d-medium{color:#ffe08a;border-color:rgba(255,200,80,.5)}
+.d-hard{color:#ff9ac8;border-color:rgba(255,60,110,.5)}
+.d-impossible{color:#ff6b6b;border-color:rgba(255,77,109,.7);background:rgba(255,77,109,.12)}
+
+.wheel-glow{filter:drop-shadow(0 0 32px rgba(255,140,40,.55)) drop-shadow(0 0 70px rgba(255,60,100,.35))}
+.spin-hub{
+  position:absolute;left:50%;top:50%;width:26%;aspect-ratio:1;
+  transform:translate(-50%,-50%);border-radius:50%;
+  border:3px solid #fff3c4;
+  background:radial-gradient(circle at 35% 30%,#fff6c8,var(--gold) 55%,#b86e00);
+  color:#2a1400;font-family:var(--f-display);font-size:clamp(.95rem,3.6vw,1.55rem);
+  cursor:pointer;
+  box-shadow:0 0 0 6px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.55),0 0 40px rgba(255,180,40,.4);
+  transition:transform .15s;
+}
+.spin-hub:hover:not(:disabled){transform:translate(-50%,-50%) scale(1.07)}
+.spin-hub:active:not(:disabled){transform:translate(-50%,-50%) scale(.95)}
+.spin-hub:disabled{filter:grayscale(.5) brightness(.7);cursor:not-allowed}
+
+.ticker{display:flex;gap:2rem;white-space:nowrap;animation:tick 55s linear infinite;width:max-content}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.poster-wheel{
+  border-radius:50%;
+  background:conic-gradient(
+    #ff3d6e 0 30deg,#2e1400 0 60deg,#ffc94a 0 90deg,#9b2cff 0 120deg,
+    #1a0a00 0 150deg,#ff8c1a 0 180deg,#ff3d6e 0 210deg,#2e1400 0 240deg,
+    #ffc94a 0 270deg,#9b2cff 0 300deg,#1a0a00 0 330deg,#ff8c1a 0 360deg
+  );
+  animation:rot 35s linear infinite;
+  box-shadow:0 0 0 8px #ffc94a,0 0 0 12px #5a3000,0 0 60px rgba(255,140,40,.55);
+}
+@keyframes rot{to{transform:rotate(360deg)}}
+
+.vig{position:fixed;inset:0;pointer-events:none;z-index:40}
+@keyframes pulseV{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.shake{animation:shake .28s linear infinite}
+.scroll-thin{scrollbar-width:thin;scrollbar-color:#8a5a20 transparent}
+.rowline{border-top:1px solid var(--line)}
+
+/* Mobile app shell */
+.app-shell{
+  max-width:480px;margin:0 auto;min-height:100dvh;
+  display:flex;flex-direction:column;
+  padding-top:var(--safe-top);
+  padding-bottom:var(--safe-bot);
+}
+@media (min-width:640px){
+  .app-shell{max-width:560px}
+}
+
+/* Sticky bottom host bar already present — boost it */
+.sticky-host{
+  position:sticky;bottom:max(8px,var(--safe-bot));
+  z-index:30;
+}
+
+/* Festive header banner */
+.festive-banner{
+  text-align:center;padding:10px 12px 4px;
+  background:linear-gradient(90deg,transparent,rgba(255,140,40,.15),transparent);
+  border-bottom:1px solid var(--line);
+  margin:0 -12px 8px;
+}
+.festive-banner .spark{animation:pulseV 1.2s ease-in-out infinite}
+
+@media (prefers-reduced-motion:reduce){
+  .beams,.beams::before,.beams::after,.ticker,.poster-wheel,.shake,.fw,.diya{animation:none!important}
+}
+</style></style>
+
+<div id="root"></div>
+<div class="fireworks" id="fw-layer" aria-hidden="true"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/framer-motion@10.18.0/dist/framer-motion.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script>
+(function(){
+const {useState,useEffect,useRef,useMemo,useCallback,Fragment}=React;
+const html=htm.bind(React.createElement);
+
+/* ============ Framer Motion (with a plain fallback if the CDN is unreachable) ============ */
+const FM=window.Motion||window.FramerMotion||window.framerMotion||null;
+const STRIP=new Set(['initial','animate','exit','transition','whileHover','whileTap','whileInView','variants','layout','layoutId','custom','onAnimationComplete','drag','dragConstraints']);
+const shimCache={};
+const shim=new Proxy({},{get:(_,tag)=>shimCache[tag]||(shimCache[tag]=React.forwardRef((p,ref)=>{const q={};for(const k in p){if(!STRIP.has(k))q[k]=p[k];}return React.createElement(tag,Object.assign({},q,{ref}));}))});
+const motion=(FM&&FM.motion)?FM.motion:shim;
+const AnimatePresence=(FM&&FM.AnimatePresence)?FM.AnimatePresence:(({children})=>children);
+
+/* ============ Utilities ============ */
+const TAU=Math.PI*2;
+const rnd=(n)=>{const a=new Uint32Array(1);crypto.getRandomValues(a);return Math.floor(a[0]/4294967296*n);};
+const pick=(a)=>a[rnd(a.length)];
+const shuffle=(a)=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=rnd(i+1);[a[i],a[j]]=[a[j],a[i]];}return a;};
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const slug=(s)=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const lsGet=(k)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):null;}catch(e){return null;}};
+const lsSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}};
+const lsDel=(k)=>{try{localStorage.removeItem(k);}catch(e){}};
+const SAVE_KEY='filmywheel-v1';
+const TEAM_COLORS=['#ff2e93','#f5c451','#7c3aed','#22d3ee','#fb923c','#34d399','#f472b6','#a3e635'];
+
+/* ============ Sound (Web Audio, no files) ============ */
+const Sfx=(()=>{
+  let ctx=null,muted=false,sus=null;
+  const ensure=()=>{if(!ctx){try{ctx=new (window.AudioContext||window.webkitAudioContext)();}catch(e){return null;}}
+    if(ctx.state==='suspended'){ctx.resume().catch(()=>{});}return ctx;};
+  const tone=(f,d,o)=>{o=o||{};if(muted)return;const c=ensure();if(!c)return;const t=c.currentTime+(o.at||0);
+    const os=c.createOscillator(),g=c.createGain();os.type=o.type||'sine';os.frequency.setValueAtTime(f,t);
+    if(o.to)os.frequency.exponentialRampToValueAtTime(o.to,t+d);
+    const v=o.vol==null?.12:o.vol;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(v,t+.012);g.gain.exponentialRampToValueAtTime(.0001,t+d);
+    os.connect(g);g.connect(c.destination);os.start(t);os.stop(t+d+.05);};
+  const api={
+    ensure,
+    setMuted(v){muted=v;if(v)api.stopSuspense();},
+    tick(){tone(1500,.035,{type:'square',vol:.045});},
+    suspense(ms){if(muted)return;const c=ensure();if(!c)return;api.stopSuspense();const t=c.currentTime,d=ms/1000;
+      const o=c.createOscillator(),g=c.createGain(),lfo=c.createOscillator(),lg=c.createGain();
+      o.type='triangle';o.frequency.setValueAtTime(70,t);o.frequency.exponentialRampToValueAtTime(300,t+d*.8);
+      lfo.frequency.setValueAtTime(7,t);lfo.frequency.linearRampToValueAtTime(2,t+d);lg.gain.value=.03;
+      g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.075,t+.4);g.gain.setValueAtTime(.075,t+d*.8);g.gain.exponentialRampToValueAtTime(.0001,t+d);
+      lfo.connect(lg);lg.connect(g.gain);o.connect(g);g.connect(c.destination);o.start(t);lfo.start(t);o.stop(t+d+.1);lfo.stop(t+d+.1);sus=o;},
+    stopSuspense(){try{if(sus)sus.stop();}catch(e){}sus=null;},
+    thud(){tone(110,.35,{type:'sine',to:40,vol:.3});},
+    fanfare(){[523,659,784,1047].forEach((f,i)=>tone(f,.28,{type:'triangle',vol:.14,at:i*.11}));
+      [523,659,784,1047].forEach((f)=>tone(f,.9,{type:'sine',vol:.06,at:.5}));},
+    pop(){tone(660,.08,{type:'triangle',vol:.1,to:990});},
+    start(){tone(440,.1,{type:'square',vol:.07});tone(880,.18,{type:'square',vol:.07,at:.1});},
+    warn(){tone(880,.14,{type:'square',vol:.07});},
+    urgent(){tone(1320,.09,{type:'square',vol:.09});},
+    buzzer(){tone(120,.95,{type:'sawtooth',vol:.22});tone(90,.95,{type:'square',vol:.12});},
+    correct(){[659,784,988,1319].forEach((f,i)=>tone(f,.22,{type:'triangle',vol:.14,at:i*.08}));},
+    fail(){tone(420,.5,{type:'sawtooth',vol:.1,to:150});},
+    skip(){tone(300,.16,{type:'triangle',vol:.1,to:200});}
+  };
+  return api;
+})();
+
+/* ============ Movie database ============ */
+/* Title @ release year @ genre (C comedy, R romance, A action, T thriller, D drama); a trailing * marks a cult classic. */
+const RAW=`
+Mother India@1957@D
+Pyaasa@1957@D
+Mughal-E-Azam@1960@R
+Anand@1971@D
+Zanjeer@1973@A
+Bobby@1973@R
+Deewaar@1975@A
+Sholay@1975@A*
+Chupke Chupke@1975@C*
+Amar Akbar Anthony@1977@C*
+Don (1978)@1978@A
+Gol Maal@1979@C*
+Silsila@1981@R
+Chashme Buddoor@1981@C*
+Disco Dancer@1982@D*
+Jaane Bhi Do Yaaro@1983@C*
+Mr. India@1987@A*
+Tezaab@1988@A
+Qayamat Se Qayamat Tak@1988@R
+Maine Pyar Kiya@1989@R
+Chandni@1989@R
+Ram Lakhan@1989@A
+Aashiqui@1990@R
+Dil@1990@R
+Saajan@1991@R
+Hum@1991@A
+Lamhe@1991@R
+Khiladi@1992@T
+Jo Jeeta Wohi Sikandar@1992@R
+Baazigar@1993@T*
+Darr@1993@T*
+Hum Hain Rahi Pyar Ke@1993@R
+Hum Aapke Hain Koun..!@1994@R
+Andaz Apna Apna@1994@C*
+Mohra@1994@A
+Dilwale Dulhania Le Jayenge@1995@R*
+Karan Arjun@1995@A*
+Rangeela@1995@R
+Bombay@1995@D
+Coolie No. 1@1995@C
+Raja Hindustani@1996@R
+Dil To Pagal Hai@1997@R
+Border@1997@A
+Pardes@1997@R
+Hero No. 1@1997@C
+Judaai@1997@C
+Kuch Kuch Hota Hai@1998@R*
+Satya@1998@T*
+Ghulam@1998@A
+Dil Se..@1998@R
+Jab Pyaar Kisise Hota Hai@1998@R
+Dulhe Raja@1998@C
+Sarfarosh@1999@A
+Hum Dil De Chuke Sanam@1999@R
+Taal@1999@R
+Biwi No.1@1999@C
+Haseena Maan Jaayegi@1999@C
+Hum Saath-Saath Hain@1999@D
+Vaastav@1999@A*
+Hera Pheri@2000@C*
+Kaho Naa... Pyaar Hai@2000@R
+Dhadkan@2000@R
+Mohabbatein@2000@R
+Josh@2000@A
+Pukar@2000@A
+Fiza@2000@D
+Mission Kashmir@2000@A
+Lagaan@2001@D*
+Gadar: Ek Prem Katha@2001@A
+Dil Chahta Hai@2001@C*
+Kabhi Khushi Kabhie Gham@2001@R
+Rehnaa Hai Terre Dil Mein@2001@R
+Yaadein@2001@R
+Devdas@2002@R
+Raaz@2002@T
+Company@2002@T
+Aankhen@2002@T
+Kaante@2002@T
+Awara Paagal Deewana@2002@C
+Humraaz@2002@T
+Mujhse Dosti Karoge!@2002@R
+Andaaz@2003@R
+Kal Ho Naa Ho@2003@R
+Koi... Mil Gaya@2003@D
+Munna Bhai M.B.B.S.@2003@C*
+Tere Naam@2003@R
+Baghban@2003@D
+Chalte Chalte@2003@R
+Hungama@2003@C
+Bhoot@2003@T
+Jism@2003@T
+Kuch Naa Kaho@2003@R
+Dhoom@2004@A
+Veer-Zaara@2004@R
+Main Hoon Na@2004@A
+Murder@2004@T
+Hum Tum@2004@R
+Swades@2004@D
+Lakshya@2004@D
+Khakee@2004@A
+Hulchul@2004@C
+Masti@2004@C
+Kyun! Ho Gaya Na...@2004@R
+No Entry@2005@C
+Bunty Aur Babli@2005@C
+Salaam Namaste@2005@R
+Garam Masala@2005@C
+Sarkar@2005@T
+Black@2005@D
+Rang De Basanti@2006@D*
+Fanaa@2006@R
+Krrish@2006@A
+Dhoom 2@2006@A
+Don (2006)@2006@A
+Bhagam Bhag@2006@C
+Phir Hera Pheri@2006@C*
+Lage Raho Munna Bhai@2006@C*
+Omkara@2006@T*
+Golmaal: Fun Unlimited@2006@C
+Khosla Ka Ghosla@2006@C*
+Kabhi Alvida Naa Kehna@2006@R
+Gangster@2006@T
+Jab We Met@2007@R
+Welcome@2007@C
+Taare Zameen Par@2007@D
+Chak De! India@2007@D*
+Bhool Bhulaiyaa@2007@C
+Partner@2007@C
+Om Shanti Om@2007@R*
+Dhamaal@2007@C*
+Johnny Gaddaar@2007@T*
+No Smoking@2007@T*
+Dhol@2007@C
+Heyy Babyy@2007@C
+Namastey London@2007@R
+Cheeni Kum@2007@R
+Singh Is Kinng@2008@C
+Ghajini@2008@A
+Rab Ne Bana Di Jodi@2008@R
+Dostana@2008@C
+Jaane Tu... Ya Jaane Na@2008@R
+Jodhaa Akbar@2008@R
+Race@2008@T
+Rock On!!@2008@D
+Golmaal Returns@2008@C
+A Wednesday!@2008@T*
+Oye Lucky! Lucky Oye!@2008@C*
+Jannat@2008@T
+Sarkar Raj@2008@T
+Bhoothnath@2008@C
+1920@2008@T
+Fashion@2008@D
+3 Idiots@2009@C*
+Wanted@2009@A
+Ajab Prem Ki Ghazab Kahani@2009@C
+Love Aaj Kal@2009@R
+Wake Up Sid@2009@D
+Dev.D@2009@D*
+New York@2009@T
+Kaminey@2009@T*
+All the Best: Fun Begins@2009@C
+De Dana Dan@2009@C
+Paa@2009@D
+Rocket Singh: Salesman of the Year@2009@D
+Delhi-6@2009@D
+Chandni Chowk to China@2009@A
+Dabangg@2010@A
+My Name Is Khan@2010@D
+Housefull@2010@C
+Golmaal 3@2010@C
+Band Baaja Baaraat@2010@R
+Raajneeti@2010@T
+Tees Maar Khan@2010@C
+Once Upon a Time in Mumbaai@2010@A
+Zindagi Na Milegi Dobara@2011@D*
+Bodyguard@2011@A
+Singham@2011@A
+The Dirty Picture@2011@D
+Rockstar@2011@R*
+Don 2@2011@A
+Tanu Weds Manu@2011@R
+Ready@2011@C
+Ra.One@2011@A
+Delhi Belly@2011@C*
+No One Killed Jessica@2011@T
+Agneepath@2012@A
+Barfi!@2012@R*
+Rowdy Rathore@2012@A
+Cocktail@2012@R
+Ek Tha Tiger@2012@A
+Jab Tak Hai Jaan@2012@R
+OMG: Oh My God!@2012@C
+Gangs of Wasseypur@2012@A*
+Kahaani@2012@T*
+Vicky Donor@2012@C*
+Student of the Year@2012@R
+Talaash@2012@T
+Bol Bachchan@2012@C
+Chennai Express@2013@C
+Yeh Jawaani Hai Deewani@2013@R*
+Aashiqui 2@2013@R
+Bhaag Milkha Bhaag@2013@D
+Krrish 3@2013@A
+Dhoom 3@2013@A
+Special 26@2013@T
+Ugly@2013@T*
+Ship of Theseus@2013@D
+Lootera@2013@R
+Raanjhanaa@2013@R
+Race 2@2013@T
+Chashme Baddoor@2013@C
+Kai Po Che!@2013@D
+Fukrey@2013@C*
+Jolly LLB@2013@C
+Madras Cafe@2013@T
+Shuddh Desi Romance@2013@R
+Goliyon Ki Raasleela Ram-Leela@2013@R
+Grand Masti@2013@C
+Kick@2014@A
+Queen@2014@C
+PK@2014@C
+Happy New Year@2014@C
+2 States@2014@R
+Holiday@2014@A
+Bang Bang!@2014@A
+Heropanti@2014@A
+Haider@2014@D*
+Mary Kom@2014@D
+Ek Villain@2014@T
+Highway@2014@R
+Gunday@2014@A
+Jai Ho@2014@A
+Humpty Sharma Ki Dulhania@2014@R
+Khoobsurat@2014@R
+Singham Returns@2014@A
+Bajrangi Bhaijaan@2015@D
+Bajirao Mastani@2015@R
+Dilwale@2015@R
+Tanu Weds Manu Returns@2015@C
+Piku@2015@C
+Badlapur@2015@T
+Baby@2015@T
+Drishyam@2015@T*
+Tamasha@2015@R*
+Detective Byomkesh Bakshy!@2015@T*
+Dil Dhadakne Do@2015@D
+Welcome Back@2015@C
+Prem Ratan Dhan Payo@2015@R
+Brothers@2015@A
+Airlift@2016@D
+Neerja@2016@D
+Sultan@2016@D
+Dangal@2016@D
+Ae Dil Hai Mushkil@2016@R
+M.S. Dhoni: The Untold Story@2016@D
+Rustom@2016@T
+Pink@2016@T
+Kapoor & Sons@2016@D
+Dear Zindagi@2016@D
+Baaghi@2016@A
+Housefull 3@2016@C
+Kahaani 2@2016@T
+Fan@2016@T
+Wazir@2016@T
+Mohenjo Daro@2016@D
+Hindi Medium@2017@C
+Toilet: Ek Prem Katha@2017@C
+Bareilly Ki Barfi@2017@C
+Badrinath Ki Dulhania@2017@R
+Golmaal Again@2017@C
+Judwaa 2@2017@C
+Secret Superstar@2017@D
+Raees@2017@A
+Jab Harry Met Sejal@2017@R
+Tiger Zinda Hai@2017@A
+Tubelight@2017@D
+Jolly LLB 2@2017@C
+Newton@2017@C
+Tumhari Sulu@2017@C
+Ittefaq@2017@T
+Padmaavat@2018@D
+Sonu Ke Titu Ki Sweety@2018@C
+Raazi@2018@T
+Stree@2018@C*
+Andhadhun@2018@T*
+Badhaai Ho@2018@C
+Sanju@2018@D
+Simmba@2018@A
+Padman@2018@D
+Veere Di Wedding@2018@C
+Race 3@2018@A
+Satyameva Jayate@2018@A
+Thugs of Hindostan@2018@A
+Zero@2018@D
+Manmarziyaan@2018@R
+Sui Dhaaga@2018@C
+Dhadak@2018@R
+102 Not Out@2018@C
+Tumbbad@2018@T*
+October@2018@D
+Uri: The Surgical Strike@2019@A
+Gully Boy@2019@D
+Kabir Singh@2019@R
+War@2019@A
+Chhichhore@2019@C
+Housefull 4@2019@C
+Bala@2019@C
+Dream Girl@2019@C
+Good Newwz@2019@C
+Kesari@2019@A
+Mission Mangal@2019@D
+Super 30@2019@D
+Saaho@2019@A
+Dabangg 3@2019@A
+Total Dhamaal@2019@C
+Luka Chuppi@2019@C
+Pati Patni Aur Woh@2019@C
+Article 15@2019@T
+Batla House@2019@T
+Kalank@2019@R
+Student of the Year 2@2019@R
+Shubh Mangal Zyada Saavdhan@2020@C
+Tanhaji@2020@A
+Jawaani Jaaneman@2020@C
+Sooryavanshi@2021@A
+83@2021@D
+Bell Bottom@2021@T
+Gangubai Kathiawadi@2022@D
+Bhool Bhulaiyaa 2@2022@C
+Brahmastra@2022@A
+Drishyam 2@2022@T
+Bhadaai Do@2022@C
+JugJugg Jeeyo@2022@C
+Jersey@2022@D
+The Kashmir Files@2022@D
+Vikram Vedha@2022@T
+Bhediya@2022@C
+Ek Villain Returns@2022@T
+Cirkus@2022@C
+Runway 34@2022@T
+Heropanti 2@2022@A
+Bachchhan Paandey@2022@A
+Jayeshbhai Jordaar@2022@C
+Rocketry: The Nambi Effect@2022@D
+Laal Singh Chaddha@2022@D
+Raksha Bandhan@2022@D
+Uunchai@2022@D
+Pathaan@2023@A
+Jawan@2023@A
+Gadar 2@2023@A
+Rocky Aur Rani Kii Prem Kahaani@2023@R
+OMG 2@2023@C
+Zara Hatke Zara Bachke@2023@C
+Animal@2023@A
+Dunki@2023@C
+12th Fail@2023@D
+Sam Bahadur@2023@D
+Tiger 3@2023@A
+Satyaprem Ki Katha@2023@R
+The Kerala Story@2023@D
+Kisi Ka Bhai Kisi Ki Jaan@2023@A
+Tu Jhoothi Main Makkaar@2023@R
+Shehzada@2023@C
+Fukrey 3@2023@C
+Dream Girl 2@2023@C
+Stree 2@2024@C
+Bhool Bhulaiyaa 3@2024@C
+Singham Again@2024@A
+Crew@2024@C
+Shaitaan@2024@T
+Munjya@2024@C
+Laapataa Ladies@2024@C
+Chandu Champion@2024@D
+Kill@2024@A
+Fighter@2024@A
+Teri Baaton Mein Aisa Uljha Jiya@2024@R
+Article 370@2024@T
+Bade Miyan Chote Miyan@2024@A
+Maidaan@2024@D
+Srikanth@2024@D
+Mr. & Mrs. Mahi@2024@R
+Sky Force@2025@A
+Chhaava@2025@D
+Saiyaara@2025@R
+Sitaare Zameen Par@2025@D
+Housefull 5@2025@C
+War 2@2025@A
+Raid 2@2025@T
+Sikandar@2025@A
+Jolly LLB 3@2025@C
+Thamma@2025@C
+Kesari Chapter 2@2025@D
+Dhadak 2@2025@R
+Son of Sardaar 2@2025@C
+Metro... In Dino@2025@R
+Dhurandhar@2025@A
+Border 2@2026@A
+`;
+const GENRE={C:'Comedy',R:'Romance',A:'Action',T:'Thriller',D:'Drama'};
+const EASY=new Set(['Hera Pheri','3 Idiots','Dilwale Dulhania Le Jayenge','Koi... Mil Gaya','Dhoom','Welcome','Chennai Express','PK','Bajrangi Bhaijaan','Jawan','Animal','Stree','Sholay','Lagaan','Dangal','Krrish','Gadar: Ek Prem Katha','Singham','Dabangg','Race','Wanted','Ghajini','Kick','Dhoom 2','Dhoom 3','Krrish 3','Pathaan','Gadar 2','Housefull','Golmaal 3','Don (2006)','Don (1978)','Bhool Bhulaiyaa','Bhool Bhulaiyaa 2','Bhool Bhulaiyaa 3','Phir Hera Pheri','Munna Bhai M.B.B.S.','Lage Raho Munna Bhai','Om Shanti Om','Ra.One','Tiger Zinda Hai','Ek Tha Tiger','Tiger 3','Sultan','Simmba','Chak De! India','Bodyguard','Mr. India','Border','Mother India','Hum Aapke Hain Koun..!','Kuch Kuch Hota Hai','Baazigar','Darr','Jab We Met','Stree 2','Ready','Singham Returns','Singham Again','Sooryavanshi','Dunki','Tanhaji','Fighter','War','Kabir Singh','Dhurandhar','Judwaa 2','Housefull 4','Housefull 5','Border 2','Raees','Padman','Hungama','Baghban','Kaante','Fashion','Kal Ho Naa Ho','Devdas','Main Hoon Na','Race 2','Brothers','Dream Girl','Sikandar']);
+const HARD=new Set(['Omkara','Dev.D','Black','Haider','Tamasha','Ugly','Ship of Theseus','No Smoking','Johnny Gaddaar','Detective Byomkesh Bakshy!','Taal','Lakshya','Swades','Fanaa','Company','Fiza','Mission Kashmir','Dhadkan','Raaz','Aankhen','Andaaz','Hum Tum','Murder','Sarkar','Rock On!!','Love Aaj Kal','Neerja','Airlift','Pink','Piku','Rustom','Secret Superstar','12th Fail','Sam Bahadur','Chandu Champion','Kaminey','A Wednesday!','Madras Cafe','Talaash','Special 26','Newton','Article 15','Pardes','Bombay','Pyaasa','Awaara','Anand','Lamhe','Dil Se..','Satya','Ghulam','Jo Jeeta Wohi Sikandar','Gangs of Wasseypur','Kai Po Che!','Highway','Dear Zindagi','Kapoor & Sons','Silsila','Tumbbad','October','Ittefaq','Vaastav','Lootera','Raanjhanaa','Manmarziyaan','Zero','Rocketry: The Nambi Effect','Uunchai','Srikanth','Maidaan','Runway 34','Sui Dhaaga','Disco Dancer','Delhi-6','Paa','Rocket Singh: Salesman of the Year']);
+const IMPOSSIBLE=new Set(['Hum Dil De Chuke Sanam','Haseena Maan Jaayegi','Kaho Naa... Pyaar Hai','Jaane Tu... Ya Jaane Na','Ajab Prem Ki Ghazab Kahani','Teri Baaton Mein Aisa Uljha Jiya','Zara Hatke Zara Bachke','Sonu Ke Titu Ki Sweety','Rocky Aur Rani Kii Prem Kahaani','Jab Tak Hai Jaan','Ae Dil Hai Mushkil','Dil Dhadakne Do','Shubh Mangal Zyada Saavdhan','Bhadaai Do','Badrinath Ki Dulhania','Bareilly Ki Barfi','Wake Up Sid','Salaam Namaste','Mujhse Dosti Karoge!','Kyun! Ho Gaya Na...','Rehnaa Hai Terre Dil Mein','Jab Pyaar Kisise Hota Hai','Goliyon Ki Raasleela Ram-Leela','Shuddh Desi Romance','Jayeshbhai Jordaar','Satyaprem Ki Katha','Tu Jhoothi Main Makkaar','Mr. & Mrs. Mahi','Metro... In Dino','Namastey London','Kabhi Alvida Naa Kehna','Humpty Sharma Ki Dulhania','Jab Harry Met Sejal','Tumhari Sulu']);
+const BASE_DB=RAW.trim().split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{
+  const p=l.split('@');const title=p[0],year=+p[1],g=p[2];const cult=g.endsWith('*');
+  const diff=IMPOSSIBLE.has(title)?'impossible':HARD.has(title)?'hard':EASY.has(title)?'easy':'medium';
+  return {id:slug(title)+'-'+year,title,year,genre:GENRE[g[0]],cult,diff,custom:false};
+});
+const DIFFS=[{k:'easy',l:'Easy'},{k:'medium',l:'Medium'},{k:'hard',l:'Hard'},{k:'impossible',l:'Impossible'},{k:'random',l:'Random'}];
+const ERA_OPTS=[{k:'pre',l:'Pre-1999'},{k:'a',l:'1999–2004'},{k:'b',l:'2005–2009'},{k:'c',l:'2010–2014'},{k:'d',l:'2015–2019'},{k:'e',l:'2020–2026'}];
+const CAT_OPTS=[{k:'classic',l:'Classic Bollywood'},{k:'90s',l:'90s Bollywood'},{k:'2000s',l:'2000s Bollywood'},{k:'modern',l:'Modern Bollywood'},{k:'Comedy',l:'Comedy'},{k:'Romance',l:'Romance'},{k:'Action',l:'Action'},{k:'Thriller',l:'Thriller'},{k:'Drama',l:'Drama'},{k:'cult',l:'Cult Classics'}];
+const TWIST_CATS=['Comedy','Romance','Action','Thriller','Drama','cult'];
+const catLabel=(k)=>(CAT_OPTS.find(c=>c.k===k)||{l:k}).l;
+const eraKey=(y)=>y<1999?'pre':y<=2004?'a':y<=2009?'b':y<=2014?'c':y<=2019?'d':'e';
+const eraTag=(y)=>y==null?'CUSTOM':y<1990?'CLASSIC':y<2000?"'90S":y<2010?'2000S':y<2020?'2010S':'2020S';
+const matchesCat=(m,k)=>k==='classic'?(m.year!=null&&m.year<1990):k==='90s'?(m.year!=null&&m.year>=1990&&m.year<2000):k==='2000s'?(m.year!=null&&m.year>=2000&&m.year<2010):k==='modern'?(m.year==null||m.year>=2010):k==='cult'?m.cult:m.genre===k;
+const allowedDiffs=(diffs)=>{const s=new Set(diffs.filter(d=>d!=='random'));if(!diffs.length||diffs.includes('random')){s.add('easy');s.add('medium');s.add('hard');}return s;};
+const passes=(m,f)=>{
+  if(f.eras.length&&m.year!=null&&!f.eras.includes(eraKey(m.year)))return false;
+  if(!allowedDiffs(f.diffs).has(m.diff))return false;
+  if(f.cats.length&&!f.cats.some(c=>matchesCat(m,c)))return false;
+  return true;
+};
+const countPool=(db,removedSet,f)=>db.filter(m=>!removedSet.has(m.id)&&passes(m,f)).length;
+
+function buildSegments({db,removedSet,filters,used,twist,twistCat}){
+  const list=db.filter(m=>!removedSet.has(m.id));
+  let pool;
+  if(twist==='impossible'){
+    pool=list.filter(m=>m.diff==='impossible'&&(!filters.eras.length||m.year==null||filters.eras.includes(eraKey(m.year))));
+    if(pool.length<3)pool=list.filter(m=>m.diff==='impossible');
+    if(pool.length<3)pool=list.filter(m=>m.diff==='impossible'||m.diff==='hard');
+  }else if(twist==='category'&&twistCat){
+    pool=list.filter(m=>passes(m,Object.assign({},filters,{cats:[twistCat]})));
+    if(pool.length<3)pool=list.filter(m=>matchesCat(m,twistCat));
+  }else pool=list.filter(m=>passes(m,filters));
+  let avail=pool.filter(m=>!used.has(m.id));
+  let recycled=false;
+  if(avail.length<3&&pool.length>avail.length&&pool.length>=3){avail=pool;recycled=true;}
+  const n=Math.min(14,avail.length);
+  const segs=shuffle(avail).slice(0,n);
+  return {segs,recycled,poolIds:pool.map(m=>m.id),poolSize:pool.length,availSize:avail.length};
+}
+
+/* ============ Game helpers ============ */
+const TWISTS={
+  normal:{name:'Classic',desc:'Standard rules: +10 for a correct guess, +5 bonus if guessed in under 15 seconds.'},
+  double:{name:'Double Points',desc:'Every point earned this turn is doubled.'},
+  sudden:{name:'Sudden Death',desc:'Only 20 seconds. A correct guess is worth +25. A miss costs 5 points.'},
+  reverse:{name:'Reverse Acting',desc:'The whole team acts together while one teammate guesses. Normal scoring.'},
+  category:{name:'Random Category',desc:'The wheel is limited to one randomly chosen category.'},
+  impossible:{name:'Impossible Movie',desc:'A brutal title, 30 extra seconds, and +20 for a correct guess.'},
+  steal:{name:'Steal Points',desc:'If the team fails, a rival steals +10 and the failing team loses 5.'}
+};
+const TWIST_CHIPS=[['normal','Classic'],['double','Double Points'],['sudden','Sudden Death'],['reverse','Reverse Acting'],['category','Random Category'],['impossible','Impossible'],['steal','Steal Points'],['surprise','Surprise me']];
+function calcCorrect ✓(twist,elapsed){
+  let base=10,bonus=elapsed<15000?5:0;
+  if(twist==='sudden'){base=25;bonus=0;}
+  if(twist==='impossible')base=20;
+  let pts=base+bonus;if(twist==='double')pts*=2;
+  return {pts,base,bonus};
+}
+const turnTotalMs=(twist,dur)=>twist==='sudden'?20000:twist==='impossible'?dur*1000+30000:dur*1000;
+const teamColor=(i)=>TEAM_COLORS[i%TEAM_COLORS.length];
+const dist4=(P)=>{const b=Math.floor(P/4),r=P%4;return [0,1,2,3].map(i=>b+(i<r?1:0));};
+const defaultRounds=(mode,P)=>mode==='two'?clamp(Math.ceil(P/2),1,10):mode==='four'?clamp(Math.ceil(P/4),1,10):1;
+const DEF_CFG={players:14,mode:'two',names2:['Team Diya','Team Firecracker'],names4:['Diyas','Firecrackers','Rangolis','Ladoos'],sizes4:[4,4,3,3],solo:'',members:{},duration:60,rounds:7,roundsTouched:false,diffs:['random'],eras:[],cats:[],steal:true,hideTitles:true};
+
+function makeTeams(cfg){
+  const P=cfg.players;let list=[];
+  if(cfg.mode==='two'){const a=Math.ceil(P/2);const sizes=[a,P-a];list=cfg.names2.map((n,i)=>({name:n.trim()||('Team '+(i+1)),size:sizes[i],key:'two'+i}));}
+  else if(cfg.mode==='four'){list=cfg.names4.map((n,i)=>({name:n.trim()||('Team '+(i+1)),size:cfg.sizes4[i],key:'four'+i}));}
+  else{const names=cfg.solo.split(',').map(s=>s.trim()).filter(Boolean);for(let i=0;i<P;i++)list.push({name:names[i]||('Player '+(i+1)),size:1,key:'solo'+i});}
+  return list.map((t,i)=>{
+    const raw=(cfg.members[t.key]||'').split(',').map(s=>s.trim()).filter(Boolean);
+    const members=cfg.mode==='solo'?[t.name]:Array.from({length:t.size},(_,k)=>raw[k]||('Player '+(k+1)));
+    return {id:i,name:t.name,size:t.size,members,score:0,played:0,skips:0};
+  });
+}
+const newGame=(cfg)=>({
+  cfg:{duration:cfg.duration,rounds:cfg.rounds,diffs:cfg.diffs.slice(),eras:cfg.eras.slice(),cats:cfg.cats.slice(),steal:cfg.steal,hideTitles:cfg.hideTitles},
+  teams:makeTeams(cfg),turn:0,used:[],phase:'wheel',movie:null,twist:'normal',twistCat:null,
+  history:[],last:null,total:0,left:0,skipped:false,resumePaused:false,nonce:0,notice:''
+});
+const resetScores=(g)=>Object.assign({},g,{teams:g.teams.map(t=>Object.assign({},t,{score:0,played:0,skips:0})),turn:0,used:[],phase:'wheel',movie:null,twist:'normal',twistCat:null,history:[],last:null,skipped:false,notice:'',nonce:g.nonce+1});
+const totalTurns=(g)=>g.teams.length*g.cfg.rounds;
+const curTeamIdx=(g)=>g.turn%g.teams.length;
+const actorOf=(g,ti)=>{ti=ti==null?curTeamIdx(g):ti;const t=g.teams[ti];const r=Math.floor(g.turn/g.teams.length);const idx=g.phase==='result'?Math.floor((g.turn-1)/g.teams.length):r;return t.members[idx%t.members.length];};
+const snapshot=(s)=>{const o=Object.assign({},s);delete o.history;return JSON.parse(JSON.stringify(o));};
+const withHist=(before,next)=>Object.assign({},next,{history:before.history.slice(-40).concat([snapshot(before)])});
+
+/* ============ Small UI bits ============ */
+const Icon=({d,size=18})=>html`<svg width=${size} height=${size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d=${d}/></svg>`;
+const IC={
+  vol:'M11 5L6 9H2v6h4l5 4V5z M15.5 8.5a5 5 0 0 1 0 7 M19 5a9 9 0 0 1 0 14',
+  mute:'M11 5L6 9H2v6h4l5 4V5z M23 9l-6 6 M17 9l6 6',
+  undo:'M3 7v6h6 M3 13a9 9 0 1 0 3-7.7L3 8',
+  film:'M2 4h20v16H2z M7 4v16 M17 4v16 M2 9h5 M2 15h5 M17 9h5 M17 15h5',
+  cog:'M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z',
+  x:'M18 6L6 18 M6 6l12 12',
+  check:'M20 6L9 17l-5-5',
+  pause:'M6 4h4v16H6z M14 4h4v16h-4z',
+  play:'M6 4l14 8-14 8z',
+  skip:'M5 4l10 8-10 8z M19 5v14',
+  eye:'M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z',
+  plus:'M12 5v14 M5 12h14',
+  minus:'M5 12h14',
+  refresh:'M23 4v6h-6 M1 20v-6h6 M3.5 9a9 9 0 0 1 15-3.4L23 10 M1 14l4.5 4.4A9 9 0 0 0 20.5 15'
+};
+const Chip=({on,onClick,children,disabled})=>html`<button type="button" class="chip" aria-pressed=${!!on} disabled=${disabled} onClick=${onClick}>${children}</button>`;
+const Toggle=({on,onChange,label,hint})=>html`
+  <div class="flex items-center justify-between gap-4">
+    <div class="min-w-0"><div class="font-semibold text-[.95rem]">${label}</div>${hint&&html`<div class="text-[.8rem] text-[var(--mute)]">${hint}</div>`}</div>
+    <button type="button" role="switch" aria-checked=${!!on} aria-label=${label} class="tgl" onClick=${()=>onChange(!on)}></button>
+  </div>`;
+const DiffPill=({d})=>html`<span class=${'pill d-'+d}>${d}</span>`;
+const Stepper=({value,min,max,onChange,label})=>html`
+  <div class="flex items-center gap-2" role="group" aria-label=${label}>
+    <button type="button" class="btn btn-ghost btn-sm" aria-label=${'Decrease '+label} onClick=${()=>onChange(clamp(value-1,min,max))} disabled=${value<=min}><${Icon} d=${IC.minus} size=${16}/></button>
+    <div class="mono text-2xl font-bold w-14 text-center">${value}</div>
+    <button type="button" class="btn btn-ghost btn-sm" aria-label=${'Increase '+label} onClick=${()=>onChange(clamp(value+1,min,max))} disabled=${value>=max}><${Icon} d=${IC.plus} size=${16}/></button>
+  </div>`;
+const Section=({label,children,aside})=>html`
+  <section class="flex flex-col gap-3">
+    <div class="flex items-baseline justify-between gap-3"><h3 class="lbl">${label}</h3>${aside&&html`<div class="text-[.78rem] text-[var(--mute)]">${aside}</div>`}</div>
+    ${children}
+  </section>`;
+
+/* ============ Confetti ============ */
+function Confetti({fire,loop}){
+  const ref=useRef(null);
+  useEffect(()=>{
+    if(!fire)return;
+    const c=ref.current;if(!c)return;const ctx=c.getContext('2d');
+    const W=c.width=window.innerWidth,H=c.height=window.innerHeight;
+    const cols=['#f5c451','#ff2e93','#7c3aed','#ffffff','#ff8fd0','#ffd978','#22d3ee'];
+    const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const N=reduce?40:(loop?150:220);
+    const mk=(y)=>({x:Math.random()*W,y,vx:(Math.random()-.5)*5,vy:Math.random()*3+2.2,s:Math.random()*8+5,r:Math.random()*6.28,vr:(Math.random()-.5)*.35,c:cols[Math.floor(Math.random()*cols.length)],circle:Math.random()<.3});
+    let P=[];for(let i=0;i<N;i++)P.push(mk(-Math.random()*H*.9));
+    let raf=0,alive=true;
+    const step=()=>{
+      if(!alive)return;
+      ctx.clearRect(0,0,W,H);
+      for(const p of P){
+        p.x+=p.vx;p.y+=p.vy;p.vy+=.035;p.r+=p.vr;
+        if(loop&&p.y>H+20){Object.assign(p,mk(-20));}
+        ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r);ctx.fillStyle=p.c;
+        if(p.circle){ctx.beginPath();ctx.arc(0,0,p.s/2,0,TAU);ctx.fill();}else ctx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);
+        ctx.restore();
+      }
+      if(!loop)P=P.filter(p=>p.y<H+30);
+      if(P.length)raf=requestAnimationFrame(step);else ctx.clearRect(0,0,W,H);
+    };
+    raf=requestAnimationFrame(step);
+    return()=>{alive=false;cancelAnimationFrame(raf);ctx.clearRect(0,0,W,H);};
+  },[fire,loop]);
+  return html`<canvas ref=${ref} class="fixed inset-0 w-full h-full pointer-events-none" style=${{zIndex:60}} aria-hidden="true"></canvas>`;
+}
+
+/* ============ Wheel ============ */
+const SEG_COLORS=[{bg:'#ff2e93',fg:'#ffffff'},{bg:'#2a0f55',fg:'#f5c451'},{bg:'#f5c451',fg:'#1e0a3a'},{bg:'#7c3aed',fg:'#ffffff'},{bg:'#12082a',fg:'#ff7ac0'},{bg:'#c026d3',fg:'#ffffff'}];
+const segColor=(i,n)=>{let k=i%SEG_COLORS.length;if(i===n-1&&n>1&&k===0)k=3;return SEG_COLORS[k];};
+
+function Wheel({segs,hideTitles,disabled,onResult,onSpinStart,muted}){
+  const canvasRef=useRef(null),wrapRef=useRef(null),pointerRef=useRef(null);
+  const thetaRef=useRef(0),rafRef=useRef(0),spinRef=useRef(false),bulbRef=useRef(0);
+  const dataRef=useRef({segs,hideTitles});
+  dataRef.current={segs,hideTitles};
+  const [spinning,setSpinning]=useState(false);
+
+  const draw=useCallback((th)=>{
+    const c=canvasRef.current;if(!c)return;const ctx=c.getContext('2d');
+    const {segs,hideTitles}=dataRef.current;const S=c.width,R=S/2,n=Math.max(segs.length,1),seg=TAU/n;
+    ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,S,S);ctx.translate(R,R);
+    const ring=S*.075,rIn=R-ring-S*.012;
+    // outer ring
+    let g=ctx.createRadialGradient(0,0,rIn,0,0,R);g.addColorStop(0,'#8a5400');g.addColorStop(.5,'#f5c451');g.addColorStop(1,'#6b3f00');
+    ctx.beginPath();ctx.arc(0,0,R-1,0,TAU);ctx.fillStyle=g;ctx.fill();
+    ctx.beginPath();ctx.arc(0,0,rIn+S*.006,0,TAU);ctx.fillStyle='#14061f';ctx.fill();
+    // bulbs
+    const B=28;for(let i=0;i<B;i++){const a=i/B*TAU;const x=Math.cos(a)*(R-ring/2-S*.004),y=Math.sin(a)*(R-ring/2-S*.004);
+      const on=((i+bulbRef.current)%2===0);
+      ctx.beginPath();ctx.arc(x,y,S*.0125,0,TAU);ctx.fillStyle=on?'#fff6d0':'#8a5a10';
+      if(on){ctx.shadowColor='#ffd24a';ctx.shadowBlur=S*.025;}ctx.fill();ctx.shadowBlur=0;}
+    // segments
+    ctx.save();ctx.rotate(th);
+    segs.forEach((m,i)=>{
+      const col=segColor(i,segs.length);
+      ctx.beginPath();ctx.moveTo(0,0);ctx.arc(0,0,rIn,i*seg,(i+1)*seg);ctx.closePath();ctx.fillStyle=col.bg;ctx.fill();
+      ctx.strokeStyle='rgba(255,223,138,.85)';ctx.lineWidth=S*.004;ctx.stroke();
+      ctx.save();ctx.rotate((i+.5)*seg);ctx.fillStyle=col.fg;ctx.textBaseline='middle';ctx.textAlign='right';
+      const maxW=rIn*.62;
+      if(hideTitles){
+        let fs=S*.044;ctx.font='800 '+fs+'px "Hanken Grotesk",system-ui,sans-serif';
+        const top=m.genre.toUpperCase();while(ctx.measureText(top).width>maxW&&fs>8){fs-=1;ctx.font='800 '+fs+'px "Hanken Grotesk",system-ui,sans-serif';}
+        ctx.fillText(top,rIn*.93,-S*.011);
+        ctx.globalAlpha=.8;ctx.font='700 '+(S*.025)+'px "Martian Mono",ui-monospace,monospace';ctx.fillText(eraTag(m.year),rIn*.93,S*.022);ctx.globalAlpha=1;
+      }else{
+        let fs=S*.04;ctx.font='800 '+fs+'px "Hanken Grotesk",system-ui,sans-serif';
+        let t=m.title;while(ctx.measureText(t).width>maxW&&fs>S*.024){fs-=.6;ctx.font='800 '+fs+'px "Hanken Grotesk",system-ui,sans-serif';}
+        while(ctx.measureText(t).width>maxW&&t.length>4){t=t.slice(0,-2);}
+        if(t!==m.title)t=t.trimEnd()+'…';
+        ctx.fillText(t,rIn*.93,0);
+      }
+      ctx.restore();
+      // star near the hub
+      ctx.save();ctx.rotate((i+.5)*seg);ctx.beginPath();ctx.arc(rIn*.36,0,S*.007,0,TAU);ctx.fillStyle=col.fg;ctx.globalAlpha=.7;ctx.fill();ctx.restore();
+    });
+    ctx.restore();
+    // film-perforation ring around the hub
+    ctx.beginPath();ctx.arc(0,0,S*.155,0,TAU);ctx.fillStyle='#14061f';ctx.fill();
+    for(let i=0;i<20;i++){const a=i/20*TAU;ctx.save();ctx.rotate(a);ctx.fillStyle='#f5c451';ctx.fillRect(S*.138,-S*.007,S*.022,S*.014);ctx.restore();}
+  },[]);
+
+  useEffect(()=>{
+    const wrap=wrapRef.current,c=canvasRef.current;if(!wrap||!c)return;
+    const fit=()=>{const dpr=Math.min(window.devicePixelRatio||1,2.5);const w=Math.round(wrap.clientWidth*dpr);if(w>0&&c.width!==w){c.width=w;c.height=w;}draw(thetaRef.current);};
+    fit();let ro=null;
+    if(window.ResizeObserver){ro=new ResizeObserver(fit);ro.observe(wrap);}else window.addEventListener('resize',fit);
+    return()=>{if(ro)ro.disconnect();else window.removeEventListener('resize',fit);};
+  },[draw]);
+  useEffect(()=>{draw(thetaRef.current);},[segs,hideTitles,draw]);
+  useEffect(()=>{
+    if(spinning)return;
+    const id=setInterval(()=>{bulbRef.current=(bulbRef.current+1)%2;draw(thetaRef.current);},520);
+    return()=>clearInterval(id);
+  },[spinning,draw]);
+  useEffect(()=>()=>{cancelAnimationFrame(rafRef.current);spinRef.current=false;Sfx.stopSuspense();},[]);
+
+  const flick=()=>{const p=pointerRef.current;if(p&&p.animate)p.animate([{transform:'rotate(0deg)'},{transform:'rotate(-22deg)'},{transform:'rotate(0deg)'}],{duration:110,easing:'ease-out'});};
+  const spin=()=>{
+    if(spinRef.current||disabled||!segs.length)return;
+    Sfx.ensure();spinRef.current=true;setSpinning(true);onSpinStart&&onSpinStart();
+    const n=segs.length,seg=TAU/n,w=rnd(n),j=(Math.random()-.5)*.7;
+    const th0=thetaRef.current;const base=-Math.PI/2-(w+.5+j)*seg;
+    const d=((((base-th0)%TAU)+TAU)%TAU)+TAU*(6+rnd(3));
+    const T=6200+rnd(1800);const t0=performance.now();
+    const idxAt=(th)=>{const a=((((-Math.PI/2-th)%TAU)+TAU)%TAU);return Math.floor(a/seg)%n;};
+    let last=idxAt(th0);let lastBulb=0;
+    Sfx.suspense(T);
+    const frame=(now)=>{
+      const p=Math.min(1,(now-t0)/T),e=1-Math.pow(1-p,4);
+      const th=th0+d*e;thetaRef.current=th;
+      if(now-lastBulb>110){bulbRef.current=(bulbRef.current+1)%2;lastBulb=now;}
+      draw(th);
+      const k=idxAt(th);if(k!==last){last=k;Sfx.tick();flick();}
+      if(p<1)rafRef.current=requestAnimationFrame(frame);
+      else{Sfx.stopSuspense();Sfx.thud();draw(th);setTimeout(()=>{spinRef.current=false;setSpinning(false);onResult(idxAt(thetaRef.current));},650);}
+    };
+    rafRef.current=requestAnimationFrame(frame);
+  };
+  const off=disabled||spinning||!segs.length;
+  return html`
+    <div class="flex flex-col items-center gap-5 w-full">
+      <div class="relative w-[min(92vw,34rem)] max-w-full" style=${{aspectRatio:'1'}}>
+        <div ref=${pointerRef} class="absolute left-1/2 z-10" style=${{top:'-1.2%',width:'9%',marginLeft:'-4.5%',transformOrigin:'50% 22%'}}>
+          <svg viewBox="0 0 40 52" width="100%" aria-hidden="true"><path d="M20 50 L3 12 A19 19 0 1 1 37 12 Z" fill="#ff2e93" stroke="#fff3c4" strokeWidth="2.5"/><circle cx="20" cy="15" r="5.5" fill="#fff3c4"/></svg>
+        </div>
+        <div ref=${wrapRef} class="wheel-glow absolute inset-0">
+          <canvas ref=${canvasRef} style=${{width:'100%',height:'100%',display:'block'}} role="img" aria-label="Roulette wheel of Bollywood movies"></canvas>
+        </div>
+        <button type="button" class="spin-hub" onClick=${spin} disabled=${off} aria-label="Spin the wheel">SPIN</button>
+      </div>
+      <button type="button" class="btn btn-pink btn-xl" onClick=${spin} disabled=${off}>${spinning?'Spinning…':'Spin the wheel'}</button>
+    </div>`;
+}
+
+/* ============ Stages ============ */
+const stageAnim={initial:{opacity:0,y:18},animate:{opacity:1,y:0},exit:{opacity:0,y:-14},transition:{duration:.28}};
+
+function TwistBanner({g}){
+  if(g.twist==='normal')return null;
+  const t=TWISTS[g.twist];
+  return html`<${motion.div} initial=${{scale:.9,opacity:0}} animate=${{scale:1,opacity:1}} class="inline-flex items-center gap-2 flex-wrap justify-center px-4 py-2 rounded-full" style=${{background:'linear-gradient(90deg,rgba(255,46,147,.3),rgba(124,58,237,.3))',border:'1px solid rgba(255,46,147,.6)'}}>
+    <span class="lbl" style=${{color:'#ffd0e8'}}>Twist</span><span class="font-bold">${t.name}</span>
+    ${g.twist==='category'&&g.twistCat&&html`<span class="pill">${catLabel(g.twistCat)}</span>`}
+  <//>`;
+}
+
+function WheelStage({g,act,db,removedSet}){
+  const [info,setInfo]=useState({segs:[],recycled:false,poolIds:[],poolSize:0,availSize:0});
+  const [spinning,setSpinning]=useState(false);
+  const used=useMemo(()=>new Set(g.used),[g.used]);
+  useEffect(()=>{if(spinning)return;setInfo(buildSegments({db,removedSet,filters:g.cfg,used,twist:g.twist,twistCat:g.twistCat}));},
+    [g.twist,g.twistCat,g.cfg.eras,g.cfg.diffs,g.cfg.cats,g.used.length,g.turn,db,removedSet,g.nonce]);
+  const ti=curTeamIdx(g),team=g.teams[ti];
+  const none=info.segs.length===0;
+  return html`
+    <div class="flex flex-col items-center gap-5">
+      <div class="text-center flex flex-col items-center gap-2">
+        <div class="lbl">Up next</div>
+        <div class="display text-3xl sm:text-4xl" style=${{color:teamColor(ti)}}>${team.name}</div>
+        <div class="text-[var(--mute)]">${g.cfg.rounds>1||g.teams.length>1?html`Acting: <b class="text-[var(--cream)]">${actorOf(g)}</b>`:null}</div>
+        <${TwistBanner} g=${g}/>
+        ${g.skipped&&html`<div class="pill d-hard">Skipped · same actor spins again</div>`}
+        ${g.notice&&html`<div class="pill d-medium">${g.notice}</div>`}
+      </div>
+      ${none?html`<div class="glass p-6 text-center max-w-md"><div class="display text-2xl mb-2">No movies match</div><p class="text-[var(--mute)] mb-4">Your filters leave the wheel empty. Widen the filters or add movies.</p><div class="flex gap-2 justify-center"><button class="btn btn-gold btn-sm" onClick=${()=>act.modal('settings')}>Edit filters</button><button class="btn btn-ghost btn-sm" onClick=${()=>act.modal('movies')}>Movies</button></div></div>`:
+      html`<${Wheel} segs=${info.segs} hideTitles=${g.cfg.hideTitles} disabled=${false} muted=${false}
+        onSpinStart=${()=>setSpinning(true)}
+        onResult=${(i)=>{setSpinning(false);act.pick(info.segs[i],info.recycled?info.poolIds:null);}}/>`}
+      <div class="flex flex-wrap justify-center gap-2 max-w-2xl" role="group" aria-label="Round twist">
+        ${TWIST_CHIPS.map(([k,l])=>html`<${Chip} key=${k} on=${g.twist===k&&k!=='surprise'} disabled=${spinning} onClick=${()=>act.setTwist(k)}>${l}<//>`)}
+      </div>
+      <p class="text-center text-sm text-[var(--mute)] max-w-lg min-h-[2.6em]">${TWISTS[g.twist].desc}</p>
+      <div class="mono text-[.7rem] tracking-wider uppercase text-[var(--mute)] text-center">${info.poolSize} films in play · ${g.used.length} used this game${info.recycled?' · pool refilled':''}</div>
+    </div>`;
+}
+
+function TitleReveal({title}){
+  const words=title.split(' ');const L=title.length;
+  const size=L>30?'clamp(1.7rem,6.4vw,3rem)':L>20?'clamp(2rem,8vw,3.8rem)':'clamp(2.4rem,10vw,4.8rem)';
+  let n=0;
+  return html`<h2 class="display gold-text text-center leading-[1.05]" style=${{fontSize:size}} aria-label=${title}>
+    ${words.map((w,wi)=>html`<span key=${wi} class="inline-block whitespace-nowrap mr-[.28em]" aria-hidden="true">${w.split('').map((ch,ci)=>{const d=(n++)*.045;return html`<${motion.span} key=${ci} class="inline-block" initial=${{opacity:0,y:30,rotateX:90}} animate=${{opacity:1,y:0,rotateX:0}} transition=${{delay:d,type:'spring',stiffness:260,damping:18}}>${ch}<//>`;})}</span>`)}
+  </h2>`;
+}
+
+function SelectedStage({g,act}){
+  const [step,setStep]=useState('announce');
+  const [shown,setShown]=useState(false);
+  const m=g.movie,ti=curTeamIdx(g),team=g.teams[ti];
+  const reverse=g.twist==='reverse';
+  useEffect(()=>{Sfx.fanfare();},[]);
+  const actor=actorOf(g);
+  return html`
+    <div class="flex flex-col items-center gap-5 text-center max-w-xl mx-auto w-full">
+      ${step==='announce'?html`
+        <${motion.div} initial=${{scale:.6,opacity:0}} animate=${{scale:1,opacity:1}} transition=${{type:'spring',stiffness:200,damping:14}} class="flex flex-col items-center gap-4 w-full">
+          <div class="lbl">The wheel has spoken</div>
+          <div class="glass w-full p-6 flex flex-col items-center gap-4" style=${{borderColor:'rgba(245,196,81,.5)'}}>
+            <div class="display text-5xl sm:text-6xl gold-text">${m.genre}</div>
+            <div class="flex flex-wrap justify-center gap-2"><span class="pill">${m.year==null?'Custom':m.year}</span><${DiffPill} d=${m.diff}/>${m.cult&&html`<span class="pill" style=${{color:'#ffd978'}}>Cult classic</span>`}</div>
+            <${TwistBanner} g=${g}/>
+          </div>
+          <div class="text-lg">${reverse?html`<b style=${{color:teamColor(ti)}}>${team.name}</b> acts together. One teammate guesses.`:html`<b style=${{color:teamColor(ti)}}>${actor}</b> of ${team.name} is on stage.`}</div>
+          <div class="text-[var(--mute)] text-sm max-w-md">Everyone else, look away. The actor takes the device and taps below. If you are casting to a TV, switch off mirroring first.</div>
+          <button class="btn btn-gold btn-xl" onClick=${()=>{Sfx.pop();setStep('private');}}>I am the actor</button>
+          <button class="btn btn-ghost btn-sm" onClick=${()=>act.skip(null)}>Skip this movie (−2)</button>
+        <//>`:html`
+        <${motion.div} initial=${{opacity:0}} animate=${{opacity:1}} class="flex flex-col items-center gap-5 w-full">
+          <div class="lbl">Private view · actor only</div>
+          <div class="glass w-full p-6 sm:p-8 min-h-[16rem] flex flex-col items-center justify-center gap-5" style=${{borderColor:'rgba(255,46,147,.5)'}}>
+            ${shown?html`<${TitleReveal} title=${m.title}/><div class="flex flex-wrap justify-center gap-2"><span class="pill">${m.genre}</span><span class="pill">${m.year==null?'Custom':m.year}</span><${DiffPill} d=${m.diff}/></div>`:
+              html`<div class="text-[var(--mute)]">Make sure nobody else can see the screen.</div>
+              <${motion.button} type="button" class="btn btn-pink btn-xl" animate=${{scale:[1,1.06,1]}} transition=${{repeat:Infinity,duration:1.6}} onClick=${()=>{Sfx.fanfare();setShown(true);}}><${Icon} d=${IC.eye} size=${20}/> Big reveal<//>`}
+          </div>
+          <div class="glass w-full p-4 text-left text-sm" style=${{borderRadius:'1rem'}}>
+            <div class="lbl mb-1">Rules of the stage</div>
+            <div>No speaking. No mouthing words. No writing letters in the air or on paper. No phones. Gestures only.</div>
+          </div>
+          <div class="flex flex-wrap items-center justify-center gap-3">
+            ${shown&&html`<button class="btn btn-ghost" onClick=${()=>setShown(false)}>Hide title</button>`}
+            <button class="btn btn-gold btn-xl" disabled=${!shown} onClick=${()=>{Sfx.start();act.startActing();}}>Start acting</button>
+          </div>
+          <button class="btn btn-ghost btn-sm" onClick=${()=>act.skip(null)}>Skip this movie (−2)</button>
+        <//>`}
+    </div>`;
+}
+
+function ActingStage({g,act}){
+  const total=g.total;
+  const [left,setLeft]=useState(g.left>0?g.left:total);
+  const [paused,setPaused]=useState(!!g.resumePaused);
+  const [over,setOver]=useState(false);
+  const [peek,setPeek]=useState(false);
+  const leftRef=useRef(left),endRef=useRef(0),overRef=useRef(false),lastSec=useRef(Math.ceil(left/1000));
+  useEffect(()=>{
+    if(paused||overRef.current)return;
+    endRef.current=performance.now()+leftRef.current;
+    const id=setInterval(()=>{
+      const l=Math.max(0,endRef.current-performance.now());leftRef.current=l;setLeft(l);
+      if(l<=0){clearInterval(id);overRef.current=true;setOver(true);Sfx.buzzer();}
+    },100);
+    return()=>clearInterval(id);
+  },[paused]);
+  const sec=Math.ceil(left/1000);
+  useEffect(()=>{
+    if(sec===lastSec.current)return;lastSec.current=sec;
+    if(sec===10)Sfx.warn();else if(sec<=5&&sec>0)Sfx.urgent();
+    act.syncLeft(leftRef.current);
+  },[sec]);
+  const elapsed=total-left;
+  const bonusOn=g.twist!=='sudden'&&elapsed<15000;
+  const {pts}=calcCorrect ✓(g.twist,elapsed);
+  const ti=curTeamIdx(g),team=g.teams[ti];
+  const frac=clamp(left/total,0,1);
+  const urgent=!over&&sec<=5,warn=!over&&sec<=10&&sec>5;
+  const col=over?'#ff4d6d':urgent?'#ff2e50':warn?'#ffb020':'#f5c451';
+  const R=132,C=2*Math.PI*R;
+  const m=g.movie;
+  const stealOn=g.cfg.steal||g.twist==='steal';
+  return html`
+    <div class="flex flex-col items-center gap-5 w-full">
+      ${(urgent||warn||over)&&html`<div class="vig" style=${{boxShadow:'inset 0 0 '+(urgent||over?'190px rgba(255,46,80,.6)':'150px rgba(255,176,32,.45)'),animation:urgent?'pulseV .5s ease-in-out infinite':'none'}} aria-hidden="true"></div>`}
+      <div class="text-center flex flex-col items-center gap-1">
+        <div class="lbl">Now acting ✨</div>
+        <div class="display text-2xl sm:text-3xl" style=${{color:teamColor(ti)}}>${g.twist==='reverse'?team.name+' · whole team':actorOf(g)+' · '+team.name}</div>
+        <${TwistBanner} g=${g}/>
+      </div>
+      <div class=${'relative '+(urgent?'shake':'')} style=${{width:'min(78vw,20rem)',aspectRatio:'1'}} role="timer" aria-live="off" aria-label=${sec+' seconds left'}>
+        <svg viewBox="0 0 300 300" class="w-full h-full" style=${{transform:'rotate(-90deg)'}} aria-hidden="true">
+          <circle cx="150" cy="150" r=${R} fill="rgba(10,4,22,.7)" stroke="rgba(255,255,255,.1)" strokeWidth="14"/>
+          <circle cx="150" cy="150" r=${R} fill="none" stroke=${col} strokeWidth="14" strokeLinecap="round" strokeDasharray=${C} strokeDashoffset=${C*(1-frac)} style=${{filter:'drop-shadow(0 0 12px '+col+')'}}/>
+        </svg>
+        <div class="absolute inset-0 flex flex-col items-center justify-center">
+          <div class="mono font-bold leading-none" style=${{fontSize:'clamp(4.5rem,22vw,7.2rem)',color:over?'#ff4d6d':urgent?'#ff7088':warn?'#ffd37a':'#fff'}}>${sec}</div>
+          <div class="lbl mt-2">${over?'Time is up':paused?'Paused':'seconds'}</div>
+        </div>
+      </div>
+      ${over&&html`<${motion.div} initial=${{scale:2.2,opacity:0,rotate:-8}} animate=${{scale:1,opacity:1,rotate:-3}} class="display text-4xl sm:text-5xl" style=${{color:'#ff4d6d',textShadow:'0 0 30px rgba(255,46,80,.8)'}}>TIME'S UP! 🧨<//>`}
+      <div class="flex flex-wrap justify-center gap-2">
+        <span class=${'pill '+(bonusOn?'d-easy':'')}>${bonusOn?'Bonus +5 for '+Math.max(0,Math.ceil((15000-elapsed)/1000))+'s more':g.twist==='sudden'?'No bonus in sudden death':'Bonus gone'}</span>
+        <span class="pill d-medium">Correct ✓ now: +${pts}</span>
+      </div>
+      <div class="relative w-full max-w-sm">
+        <button type="button" class="btn btn-ghost btn-sm w-full" style=${{touchAction:'none'}}
+          onPointerDown=${(e)=>{e.preventDefault();setPeek(true);}} onPointerUp=${()=>setPeek(false)} onPointerLeave=${()=>setPeek(false)} onPointerCancel=${()=>setPeek(false)}>
+          <${Icon} d=${IC.eye} size=${16}/> Actor: hold to peek at the title</button>
+        ${peek&&html`<div class="absolute inset-x-0 bottom-full mb-2 glass p-4 text-center z-20"><div class="display gold-text text-2xl">${m.title}</div></div>`}
+      </div>
+      <div class="glass p-3 w-full max-w-2xl" style=${{borderRadius:'1.2rem',position:'sticky',bottom:'max(.75rem,env(safe-area-inset-bottom,0px))',zIndex:30}}>
+        <div class="lbl mb-2 text-center">Host controls 🪔</div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          <button class="btn btn-good" onClick=${()=>act.correct(leftRef.current)}><${Icon} d=${IC.check} size=${16}/> Correct ✓</button>
+          <button class="btn btn-bad" onClick=${()=>act.fail(leftRef.current)}><${Icon} d=${IC.x} size=${16}/> ${over?"Time's up":'Failed'}</button>
+          <button class="btn btn-ghost" onClick=${()=>{Sfx.skip();act.skip(leftRef.current);}}><${Icon} d=${IC.skip} size=${16}/> Skip −2</button>
+          <button class="btn btn-ghost" disabled=${over} onClick=${()=>setPaused(p=>!p)}><${Icon} d=${paused?IC.play:IC.pause} size=${16}/> ${paused?'Resume':'Pause'}</button>
+        </div>
+        ${stealOn&&g.teams.length>1&&html`<div class="text-center text-[.74rem] text-[var(--mute)] mt-2">A miss opens a steal for rivals: +${g.twist==='steal'?10:5}.</div>`}
+      </div>
+    </div>`;
+}
+
+function StealStage({g,act}){
+  const ti=g.last.team;const pts=g.twist==='steal'?10:5;
+  const rivals=g.teams.filter(t=>t.id!==ti);
+  return html`
+    <div class="flex flex-col items-center gap-5 text-center max-w-xl mx-auto w-full">
+      <div class="lbl">Steal round 🧨</div>
+      <div class="display text-4xl sm:text-5xl" style=${{color:'#ff7ac0'}}>Rivals, grab the points!</div>
+      <p class="text-[var(--mute)] max-w-md">The acting team missed. Any rival team can guess once. If someone names the movie, tap their team for +${pts}.</p>
+      <div class="grid gap-2 w-full ${rivals.length>6?'sm:grid-cols-2':''}" style=${{maxHeight:'46vh',overflowY:'auto'}}>
+        ${rivals.map(t=>html`<button key=${t.id} class="btn btn-ghost justify-between" onClick=${()=>{Sfx.correct();act.steal(t.id);}}><span class="flex items-center gap-2"><span style=${{width:'.7rem',height:'.7rem',borderRadius:'50%',background:teamColor(t.id)}}></span>${t.name}</span><span class="mono">+${pts}</span></button>`)}
+      </div>
+      <button class="btn btn-bad" onClick=${()=>act.steal(null)}>Nobody stole it</button>
+    </div>`;
+}
+
+function ResultStage({g,act}){
+  const L=g.last;const t=g.teams[L.team];const done=g.turn>=totalTurns(g);
+  const good=L.kind==='correct';
+  return html`
+    <div class="flex flex-col items-center gap-5 text-center max-w-xl mx-auto w-full">
+      <${Confetti} fire=${good?g.turn+1:0} loop=${false}/>
+      <div class="lbl">${good?'Got it! 🪔':'Not this time'}</div>
+      <div class="text-[var(--mute)]">The film was</div>
+      <${TitleReveal} title=${L.movie.title}/>
+      <div class="flex flex-wrap justify-center gap-2"><span class="pill">${L.movie.genre}</span><span class="pill">${L.movie.year==null?'Custom':L.movie.year}</span><${DiffPill} d=${L.movie.diff}/></div>
+      <${motion.div} initial=${{scale:.5,opacity:0}} animate=${{scale:1,opacity:1}} transition=${{type:'spring',delay:.5}} class="glass px-6 py-4 w-full">
+        <div class="font-semibold" style=${{color:teamColor(t.id)}}>${t.name}</div>
+        ${good?html`<div class="mono text-4xl font-bold" style=${{color:'#7ff0c0'}}>+${L.pts}</div><div class="text-sm text-[var(--mute)]">${L.bonus?'Includes the +5 quick-guess bonus':'No quick-guess bonus'}${L.twist==='double'?' · doubled':''}</div>`:
+          html`<div class="mono text-4xl font-bold" style=${{color:L.pts<0?'#ff7088':'var(--cream)'}}>${L.pts<0?L.pts:'0'}</div><div class="text-sm text-[var(--mute)]">${L.pts<0?'Penalty for the miss':'No points this turn'}</div>`}
+        ${L.steal&&html`<div class="rowline mt-3 pt-3">${L.steal.team!=null?html`<span style=${{color:teamColor(L.steal.team)}} class="font-semibold">${g.teams[L.steal.team].name}</span> stole <b class="mono">+${L.steal.pts}</b>`:html`<span class="text-[var(--mute)]">Nobody stole it</span>`}</div>`}
+      <//>
+      <button class="btn btn-gold btn-xl" onClick=${()=>act.next()}>${done?'See final results 🏆':'Next turn →'}</button>
+    </div>`;
+}
+
+function Scoreboard({g,compact}){
+  const T=g.cfg.rounds,ti=g.phase==='result'||g.phase==='steal'?g.last&&g.last.team:curTeamIdx(g);
+  const top=Math.max(...g.teams.map(t=>t.score),1);
+  return html`
+    <div class=${'glass '+(compact?'p-3':'p-4')} aria-label="Scoreboard">
+      <div class="flex items-center justify-between mb-3"><h3 class="lbl">Scoreboard</h3><div class="mono text-[.68rem] text-[var(--mute)]">Turn ${Math.min(g.turn+(g.phase==='result'||g.phase==='steal'||g.phase==='end'?0:1),totalTurns(g))} / ${totalTurns(g)}</div></div>
+      <div class=${'flex flex-col gap-2 scroll-thin '+(g.teams.length>6?'max-h-[26rem] overflow-y-auto pr-1':'')}>
+        ${g.teams.map(t=>{const left=Math.max(0,T-t.played);const on=t.id===ti&&g.phase!=='end';
+          return html`<div key=${t.id} class="rounded-xl px-3 py-2" style=${{background:on?'rgba(255,255,255,.1)':'rgba(255,255,255,.03)',border:'1px solid '+(on?teamColor(t.id):'var(--line)')}}>
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2 min-w-0"><span style=${{width:'.65rem',height:'.65rem',borderRadius:'50%',background:teamColor(t.id),flex:'none'}}></span><span class="font-semibold truncate">${t.name}</span></div>
+              <div class="mono text-xl font-bold">${t.score}</div>
+            </div>
+            <div class="flex items-center justify-between mono text-[.66rem] text-[var(--mute)] mt-1"><span>Played ${t.played}</span><span>Left ${left}</span>${t.skips>0&&html`<span>Skips ${t.skips}</span>`}</div>
+            <div class="h-1 rounded-full mt-1.5" style=${{background:'rgba(255,255,255,.08)'}}><div class="h-full rounded-full" style=${{width:clamp(t.score/top*100,0,100)+'%',background:teamColor(t.id),transition:'width .5s'}}></div></div>
+          </div>`;})}
+      </div>
+    </div>`;
+}
+
+function EndStage({g,act}){
+  const sorted=g.teams.slice().sort((a,b)=>b.score-a.score);
+  const topScore=sorted[0].score;const winners=sorted.filter(t=>t.score===topScore);
+  const top=Math.max(topScore,1);
+  useEffect(()=>{Sfx.fanfare();setTimeout(()=>Sfx.correct(),600);},[]);
+  return html`
+    <div class="relative flex flex-col items-center gap-6 text-center max-w-2xl mx-auto w-full">
+      <${Confetti} fire=${1} loop=${true}/>
+      <${motion.div} class="fixed inset-y-0 left-0 w-1/2 z-50 pointer-events-none" style=${{background:'linear-gradient(90deg,#4a0a2a,#8a1250)'}} initial=${{x:0}} animate=${{x:'-102%'}} transition=${{duration:1.4,delay:.35,ease:'easeInOut'}}/>
+      <${motion.div} class="fixed inset-y-0 right-0 w-1/2 z-50 pointer-events-none" style=${{background:'linear-gradient(270deg,#4a0a2a,#8a1250)'}} initial=${{x:0}} animate=${{x:'102%'}} transition=${{duration:1.4,delay:.35,ease:'easeInOut'}}/>
+      <${motion.div} initial=${{scale:.3,rotate:-20,opacity:0}} animate=${{scale:1,rotate:0,opacity:1}} transition=${{type:'spring',delay:1.2,stiffness:140,damping:10}}>
+        <svg width="110" height="110" viewBox="0 0 64 64" aria-hidden="true"><path d="M16 8h32v14a16 16 0 0 1-32 0z" fill="#f5c451" stroke="#fff3c4" strokeWidth="2"/><path d="M16 12H6v4a10 10 0 0 0 10 10M48 12h10v4a10 10 0 0 1-10 10" fill="none" stroke="#f5c451" strokeWidth="3"/><path d="M28 38h8v8h-8z M20 54h24v-6H20z" fill="#d99a1c"/></svg>
+      <//>
+      <div class="lbl">${winners.length>1?'It is a festive tie!':'The Diwali champions are'}</div>
+      <h2 class="display gold-text leading-tight" style=${{fontSize:'clamp(2.4rem,9vw,5rem)'}}>${winners.map(w=>w.name).join(' & ')}</h2>
+      <div class="mono text-2xl">${topScore} points</div>
+      <div class="glass w-full p-4 text-left">
+        <h3 class="lbl mb-3">Final festive scoreboard</h3>
+        <div class="flex flex-col gap-2 scroll-thin max-h-[22rem] overflow-y-auto pr-1">
+          ${sorted.map((t,i)=>html`<div key=${t.id} class="flex items-center gap-3">
+            <div class="mono w-6 text-[var(--mute)]">${i+1}</div>
+            <div class="flex-1 min-w-0"><div class="flex justify-between gap-2"><span class="font-semibold truncate" style=${{color:teamColor(t.id)}}>${t.name}</span><span class="mono font-bold">${t.score}</span></div>
+              <div class="h-1.5 rounded-full mt-1" style=${{background:'rgba(255,255,255,.08)'}}><div class="h-full rounded-full" style=${{width:clamp(t.score/top*100,0,100)+'%',background:teamColor(t.id)}}></div></div></div>
+          </div>`)}
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-3">
+        <button class="btn btn-gold btn-xl" onClick=${()=>act.playAgain()}>Play again ✨</button>
+        <button class="btn btn-ghost btn-xl" onClick=${()=>act.newGame()}>New party</button>
+      </div>
+    </div>`;
+}
+
+/* ============ Filters (shared by setup + in-game settings) ============ */
+function FilterBlock({f,set}){
+  const tog=(key,val)=>set(Object.assign({},f,{[key]:f[key].includes(val)?f[key].filter(x=>x!==val):f[key].concat([val])}));
+  return html`
+    <div class="flex flex-col gap-5">
+      <${Section} label="Difficulty" aside="Pick any mix. Random covers Easy, Medium and Hard.">
+        <div class="flex flex-wrap gap-2">${DIFFS.map(d=>html`<${Chip} key=${d.k} on=${f.diffs.includes(d.k)} onClick=${()=>tog('diffs',d.k)}>${d.l}<//>`)}</div>
+      <//>
+      <${Section} label="Era" aside=${f.eras.length?'':'All eras'}>
+        <div class="flex flex-wrap gap-2"><${Chip} on=${!f.eras.length} onClick=${()=>set(Object.assign({},f,{eras:[]}))}>All movies<//>${ERA_OPTS.map(e=>html`<${Chip} key=${e.k} on=${f.eras.includes(e.k)} onClick=${()=>tog('eras',e.k)}>${e.l}<//>`)}</div>
+      <//>
+      <${Section} label="Category" aside=${f.cats.length?'':'All categories'}>
+        <div class="flex flex-wrap gap-2"><${Chip} on=${!f.cats.length} onClick=${()=>set(Object.assign({},f,{cats:[]}))}>Everything<//>${CAT_OPTS.map(c=>html`<${Chip} key=${c.k} on=${f.cats.includes(c.k)} onClick=${()=>tog('cats',c.k)}>${c.l}<//>`)}</div>
+      <//>
+    </div>`;
+}
+
+/* ============ Setup ============ */
+function Setup({cfg,setCfg,onStart,pool,saved,onResume,onDiscard,openMovies,dbCount}){
+  const upd=(o)=>setCfg(c=>Object.assign({},c,o));
+  const modeMin={two:2,four:4,solo:2};
+  const setMode=(mode)=>setCfg(c=>{const P=Math.max(c.players,modeMin[mode]);const n=Object.assign({},c,{mode,players:P,sizes4:dist4(P)});if(!c.roundsTouched)n.rounds=defaultRounds(mode,P);return n;});
+  const setPlayers=(P)=>setCfg(c=>{P=clamp(P,modeMin[c.mode],40);const n=Object.assign({},c,{players:P,sizes4:dist4(P)});if(!c.roundsTouched)n.rounds=defaultRounds(c.mode,P);return n;});
+  const sum4=cfg.sizes4.reduce((a,b)=>a+b,0);
+  const bad4=cfg.mode==='four'&&(sum4!==cfg.players||cfg.sizes4.some(s=>s<1));
+  const teamsN=cfg.mode==='two'?2:cfg.mode==='four'?4:cfg.players;
+  const turns=teamsN*cfg.rounds;
+  const mins=Math.round(turns*(cfg.duration+35)/60);
+  const members=(key,label)=>html`<details class="mt-1"><summary class="text-[.78rem] text-[var(--mute)] cursor-pointer">${label}</summary><textarea id=${'m-'+key} class="mt-1" placeholder="Names, separated by commas (optional)" value=${cfg.members[key]||''} onInput=${(e)=>upd({members:Object.assign({},cfg.members,{[key]:e.target.value})})}></textarea></details>`;
+  const ticker=useMemo(()=>shuffle(BASE_DB).slice(0,40).map(m=>m.title),[]);
+  return html`
+    <div class="relative z-10 py-8 lg:py-12 max-w-6xl mx-auto grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,34rem)] items-start">
+      <header class="flex flex-col gap-6 lg:sticky lg:top-10">
+        <div class="diya-row" aria-hidden="true"><span class="diya">🪔</span><span class="diya">🪔</span><span class="diya">🪔</span><span class="diya">🪔</span><span class="diya">🪔</span></div>
+        <div class="lbl">Diwali night · Bollywood dumb charades</div>
+        <h1 class="display gold-text leading-[.92]" style=${{fontSize:'clamp(3.6rem,13vw,8.6rem)'}}>DIWALI<br/>DIWALI WHEEL</h1>
+        <p class="text-lg text-[var(--mute)] max-w-md">Light the diyas, spin the wheel, act the film — let the whole room shout the title! Made for one phone in a festive room full of friends.</p>
+        <div class="hidden lg:block poster-wheel" style=${{width:'15rem',height:'15rem'}} aria-hidden="true"></div>
+        <div class="overflow-hidden rounded-full border border-[var(--line)] py-2" style=${{maskImage:'linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)',WebkitMaskImage:'linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)'}} aria-hidden="true">
+          <div class="ticker mono text-[.72rem] uppercase tracking-widest text-[var(--gold)]">${ticker.concat(ticker).map((t,i)=>html`<span key=${i}>${t}</span>`)}</div>
+        </div>
+      </header>
+      <main class="glass p-5 sm:p-7 flex flex-col gap-7">
+        ${saved&&html`<div class="rounded-2xl p-4 flex flex-wrap items-center justify-between gap-3" style=${{background:'rgba(245,196,81,.1)',border:'1px solid rgba(245,196,81,.5)'}}>
+          <div><div class="font-bold">Party in progress 🪔</div><div class="text-sm text-[var(--mute)]">Turn ${saved.turn+1} of ${saved.teams.length*saved.cfg.rounds} · ${saved.teams.map(t=>t.name+' '+t.score).join(' · ')}</div></div>
+          <div class="flex gap-2"><button class="btn btn-gold btn-sm" onClick=${onResume}>Resume</button><button class="btn btn-ghost btn-sm" onClick=${onDiscard}>Discard</button></div></div>`}
+        <${Section} label="Players">
+          <div class="flex items-center justify-between gap-4 flex-wrap"><${Stepper} value=${cfg.players} min=${modeMin[cfg.mode]} max=${40} onChange=${setPlayers} label="players"/><div class="text-sm text-[var(--mute)]">Default is 14 friends</div></div>
+        <//>
+        <${Section} label="Teams" aside=${cfg.mode==='two'?cfg.players>1?Math.ceil(cfg.players/2)+' · '+Math.floor(cfg.players/2):'':cfg.mode==='four'?cfg.sizes4.join(' · '):'Everyone plays alone'}>
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Team mode">
+            <${Chip} on=${cfg.mode==='two'} onClick=${()=>setMode('two')}>2 teams<//>
+            <${Chip} on=${cfg.mode==='four'} onClick=${()=>setMode('four')}>4 teams<//>
+            <${Chip} on=${cfg.mode==='solo'} onClick=${()=>setMode('solo')}>Individual<//>
+          </div>
+          ${cfg.mode==='two'&&html`<div class="grid gap-3 sm:grid-cols-2">${[0,1].map(i=>html`<div key=${i}><input id=${'n2-'+i} type="text" aria-label=${'Team '+(i+1)+' name'} maxlength="24" value=${cfg.names2[i]} onInput=${(e)=>{const a=cfg.names2.slice();a[i]=e.target.value;upd({names2:a});}}/>${members('two'+i,'Player names')}</div>`)}</div>`}
+          ${cfg.mode==='four'&&html`<div class="flex flex-col gap-3">${[0,1,2,3].map(i=>html`<div key=${i}><div class="grid grid-cols-[minmax(0,1fr)_5rem] gap-2"><input id=${'n4-'+i} type="text" aria-label=${'Team '+(i+1)+' name'} maxlength="24" value=${cfg.names4[i]} onInput=${(e)=>{const a=cfg.names4.slice();a[i]=e.target.value;upd({names4:a});}}/><input id=${'s4-'+i} type="number" aria-label=${'Team '+(i+1)+' size'} min="1" max="40" value=${cfg.sizes4[i]} onInput=${(e)=>{const a=cfg.sizes4.slice();a[i]=Math.max(0,parseInt(e.target.value)||0);upd({sizes4:a});}}/></div>${members('four'+i,'Player names')}</div>`)}
+            <div class=${'text-sm '+(bad4?'text-[var(--bad)]':'text-[var(--mute)]')}>${bad4?'Team sizes add up to '+sum4+', but you set '+cfg.players+' players. Adjust the numbers.':'Team sizes add up to '+sum4+'.'}</div></div>`}
+          ${cfg.mode==='solo'&&html`<textarea id="solo-names" placeholder=${'Player names, separated by commas (optional). Empty slots become Player 1, Player 2 and so on.'} value=${cfg.solo} onInput=${(e)=>upd({solo:e.target.value})}></textarea>`}
+        <//>
+        <${Section} label="Round timer">
+          <div class="flex flex-wrap gap-2">${[30,45,60,90].map(s=>html`<${Chip} key=${s} on=${cfg.duration===s} onClick=${()=>upd({duration:s})}>${s} seconds<//>`)}</div>
+        <//>
+        <${Section} label=${cfg.mode==='solo'?'Turns per player':'Rounds per team'} aside=${turns+' turns · about '+mins+' min'}>
+          <${Stepper} value=${cfg.rounds} min=${1} max=${10} onChange=${(v)=>upd({rounds:v,roundsTouched:true})} label="rounds"/>
+        <//>
+        <${FilterBlock} f=${cfg} set=${(f)=>upd({diffs:f.diffs,eras:f.eras,cats:f.cats})}/>
+        <${Section} label="Table rules">
+          <${Toggle} on=${cfg.steal} onChange=${(v)=>upd({steal:v})} label="Steal round 🧨" hint="After a miss, a rival team can guess for +5"/>
+          <${Toggle} on=${cfg.hideTitles} onChange=${(v)=>upd({hideTitles:v})} label="Hide titles on the wheel" hint="Segments show genre and era so spectators learn nothing"/>
+        <//>
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center justify-between gap-3 flex-wrap"><div class=${'mono text-sm '+(pool<1?'text-[var(--bad)]':'text-[var(--gold)]')}>${pool} of ${dbCount} movies in play</div><button class="btn btn-ghost btn-sm" onClick=${openMovies}><${Icon} d=${IC.film} size=${15}/> Manage movies</button></div>
+          <button class="btn btn-pink btn-xl w-full" disabled=${pool<1||bad4} onClick=${onStart}>Start the Diwali Party 🪔</button>
+        </div>
+      </main>
+    </div>`;
+}
+
+/* ============ Modals ============ */
+function Modal({title,onClose,children,wide}){
+  useEffect(()=>{const h=(e)=>{if(e.key==='Escape')onClose();};window.addEventListener('keydown',h);return()=>window.removeEventListener('keydown',h);},[onClose]);
+  return html`<div class="fixed inset-0 z-[70] flex items-end sm:items-center justify-center p-0 sm:p-6" role="dialog" aria-modal="true" aria-label=${title}>
+    <div class="absolute inset-0" style=${{background:'rgba(5,2,12,.78)'}} onClick=${onClose}></div>
+    <${motion.div} initial=${{y:40,opacity:0}} animate=${{y:0,opacity:1}} class=${'glass relative w-full '+(wide?'sm:max-w-3xl':'sm:max-w-xl')+' max-h-[92vh] overflow-y-auto scroll-thin p-5 sm:p-6'} style=${{background:'linear-gradient(160deg,#241046,#150a2b)',borderRadius:'1.4rem'}}>
+      <div class="flex items-center justify-between mb-4 gap-3"><h2 class="display text-2xl gold-text">${title}</h2><button class="btn btn-ghost btn-sm" onClick=${onClose} aria-label="Close"><${Icon} d=${IC.x} size=${16}/></button></div>
+      ${children}
+    <//>
+  </div>`;
+}
+
+function MovieManager({db,removedSet,onToggle,onDelete,onAdd,onResetRemoved,onClose}){
+  const [q,setQ]=useState('');const [cat,setCat]=useState('');const [era,setEra]=useState('');const [dif,setDif]=useState('');const [limit,setLimit]=useState(60);
+  const [nt,setNt]=useState('');const [ny,setNy]=useState('');const [ng,setNg]=useState('Comedy');const [nd,setNd]=useState('medium');
+  const list=useMemo(()=>db.filter(m=>(!q||m.title.toLowerCase().includes(q.toLowerCase()))&&(!cat||matchesCat(m,cat))&&(!era||m.year==null||eraKey(m.year)===era)&&(!dif||m.diff===dif)).sort((a,b)=>(a.year||9999)-(b.year||9999)||a.title.localeCompare(b.title)),[db,q,cat,era,dif]);
+  const dup=nt.trim()&&db.some(m=>m.title.toLowerCase()===nt.trim().toLowerCase());
+  return html`<${Modal} title="Movie library 🎬" onClose=${onClose} wide=${true}>
+    <div class="flex flex-col gap-5">
+      <div class="glass p-4" style=${{borderRadius:'1rem'}}>
+        <div class="lbl mb-2">Add a custom movie</div>
+        <div class="grid gap-2 sm:grid-cols-[minmax(0,1fr)_6rem]"><input id="add-title" type="text" placeholder="Movie title" value=${nt} onInput=${(e)=>setNt(e.target.value)}/><input id="add-year" type="number" placeholder="Year" value=${ny} onInput=${(e)=>setNy(e.target.value)}/></div>
+        <div class="grid gap-2 grid-cols-2 mt-2"><select id="add-genre" aria-label="Genre" value=${ng} onChange=${(e)=>setNg(e.target.value)}>${['Comedy','Romance','Action','Thriller','Drama'].map(x=>html`<option key=${x} value=${x}>${x}</option>`)}</select>
+          <select id="add-diff" aria-label="Difficulty" value=${nd} onChange=${(e)=>setNd(e.target.value)}>${['easy','medium','hard','impossible'].map(x=>html`<option key=${x} value=${x}>${x}</option>`)}</select></div>
+        <div class="flex items-center gap-3 mt-3 flex-wrap"><button class="btn btn-gold btn-sm" disabled=${!nt.trim()||dup} onClick=${()=>{onAdd({title:nt.trim(),year:ny?clamp(parseInt(ny)||0,1913,2099):null,genre:ng,diff:nd});setNt('');setNy('');}}>Add movie</button>${dup&&html`<span class="text-sm text-[var(--bad)]">That title is already in the library.</span>`}</div>
+      </div>
+      <div>
+        <div class="grid gap-2 sm:grid-cols-4">
+          <input id="lib-search" type="text" class="sm:col-span-2" placeholder="Search titles" value=${q} onInput=${(e)=>{setQ(e.target.value);setLimit(60);}}/>
+          <select id="lib-cat" aria-label="Category" value=${cat} onChange=${(e)=>{setCat(e.target.value);setLimit(60);}}><option value="">All categories</option>${CAT_OPTS.map(c=>html`<option key=${c.k} value=${c.k}>${c.l}</option>`)}</select>
+          <select id="lib-era" aria-label="Era" value=${era} onChange=${(e)=>{setEra(e.target.value);setLimit(60);}}><option value="">All eras</option>${ERA_OPTS.map(c=>html`<option key=${c.k} value=${c.k}>${c.l}</option>`)}</select>
+        </div>
+        <div class="flex items-center justify-between gap-2 mt-2 flex-wrap">
+          <select id="lib-diff" aria-label="Difficulty" class="!w-auto" value=${dif} onChange=${(e)=>{setDif(e.target.value);setLimit(60);}}><option value="">Any difficulty</option>${['easy','medium','hard','impossible'].map(x=>html`<option key=${x} value=${x}>${x}</option>`)}</select>
+          <div class="mono text-[.72rem] text-[var(--mute)]">${list.length} shown · ${db.length-removedSet.size} active · ${removedSet.size} removed</div>
+          ${removedSet.size>0&&html`<button class="btn btn-ghost btn-sm" onClick=${onResetRemoved}>Restore all removed</button>`}
+        </div>
+      </div>
+      <div class="flex flex-col">
+        ${list.slice(0,limit).map(m=>{const off=removedSet.has(m.id);return html`<div key=${m.id} class="rowline flex items-center gap-3 py-2" style=${{opacity:off?.45:1}}>
+          <div class="min-w-0 flex-1"><div class=${'font-semibold truncate '+(off?'line-through':'')}>${m.title}</div><div class="mono text-[.66rem] text-[var(--mute)]">${m.year==null?'Custom':m.year} · ${m.genre}${m.cult?' · Cult':''}${m.custom?' · Yours':''}</div></div>
+          <${DiffPill} d=${m.diff}/>
+          ${m.custom?html`<button class="btn btn-ghost btn-sm" onClick=${()=>onDelete(m.id)}>Delete</button>`:html`<button class="btn btn-ghost btn-sm" onClick=${()=>onToggle(m.id)}>${off?'Restore':'Remove'}</button>`}
+        </div>`;})}
+        ${list.length>limit&&html`<button class="btn btn-ghost btn-sm mt-3 self-center" onClick=${()=>setLimit(l=>l+80)}>Show more</button>`}
+        ${!list.length&&html`<div class="text-center text-[var(--mute)] py-6">Nothing matches that search.</div>`}
+      </div>
+    </div>
+  <//>`;
+}
+
+function SettingsModal({g,setCfg,onClose,onRestart,onNewGame}){
+  const [confirm,setConfirm]=useState(null);
+  const f=g.cfg;
+  return html`<${Modal} title="Party settings" onClose=${onClose}>
+    <div class="flex flex-col gap-6">
+      <${Section} label="Round timer"><div class="flex flex-wrap gap-2">${[30,45,60,90].map(s=>html`<${Chip} key=${s} on=${f.duration===s} onClick=${()=>setCfg({duration:s})}>${s} seconds<//>`)}</div><div class="text-[.78rem] text-[var(--mute)]">Applies from the next spin.</div><//>
+      <${Section} label="Table rules">
+        <${Toggle} on=${f.steal} onChange=${(v)=>setCfg({steal:v})} label="Steal round 🧨" hint="Rivals guess after a miss for +5"/>
+        <${Toggle} on=${f.hideTitles} onChange=${(v)=>setCfg({hideTitles:v})} label="Hide titles on the wheel" hint="Show genre and era only"/>
+      <//>
+      <${FilterBlock} f=${f} set=${(n)=>setCfg({diffs:n.diffs,eras:n.eras,cats:n.cats})}/>
+      <div class="rowline pt-5 flex flex-wrap gap-2">
+        ${confirm==='restart'?html`<span class="text-sm self-center">Reset all scores and start again?</span><button class="btn btn-bad btn-sm" onClick=${()=>{onRestart();onClose();}}>Yes, restart</button><button class="btn btn-ghost btn-sm" onClick=${()=>setConfirm(null)}>Cancel</button>`:
+          confirm==='new'?html`<span class="text-sm self-center">Leave this game and return to setup?</span><button class="btn btn-bad btn-sm" onClick=${()=>{onNewGame();}}>Yes, new game</button><button class="btn btn-ghost btn-sm" onClick=${()=>setConfirm(null)}>Cancel</button>`:
+          html`<button class="btn btn-ghost btn-sm" onClick=${()=>setConfirm('restart')}><${Icon} d=${IC.refresh} size=${15}/> Restart party</button><button class="btn btn-ghost btn-sm" onClick=${()=>setConfirm('new')}>New party setup</button>`}
+      </div>
+    </div>
+  <//>`;
+}
+
+/* ============ App ============ */
+function App(){
+  const boot=useMemo(()=>lsGet(SAVE_KEY)||{},[]);
+  const [screen,setScreen]=useState('setup');
+  const [cfg,setCfg]=useState(()=>Object.assign({},DEF_CFG,boot.cfg||{}));
+  const [g,setG]=useState(null);
+  const [custom,setCustom]=useState(boot.custom||[]);
+  const [removed,setRemoved]=useState(boot.removed||[]);
+  const [muted,setMuted]=useState(!!boot.muted);
+  const [modal,setModal]=useState(null);
+  const [saved,setSaved]=useState(boot.g&&boot.screen==='game'&&boot.g.phase!=='end'?boot.g:null);
+  const db=useMemo(()=>BASE_DB.concat(custom),[custom]);
+  const removedSet=useMemo(()=>new Set(removed),[removed]);
+  useEffect(()=>{Sfx.setMuted(muted);},[muted]);
+  useEffect(()=>{const id=setTimeout(()=>lsSet(SAVE_KEY,{cfg,g,screen,custom,removed,muted}),250);return()=>clearTimeout(id);},[cfg,g,screen,custom,removed,muted]);
+
+  const pool=useMemo(()=>countPool(db,removedSet,cfg),[db,removedSet,cfg.diffs,cfg.eras,cfg.cats]);
+  const startGame=()=>{Sfx.ensure();setG(newGame(cfg));setScreen('game');setSaved(null);};
+  const resume=()=>{Sfx.ensure();const s=saved;setG(Object.assign({},s,{resumePaused:s.phase==='acting',nonce:(s.nonce||0)+1}));setScreen('game');setSaved(null);};
+  const discard=()=>{setSaved(null);};
+
+  const act=useMemo(()=>({
+    modal:(m)=>setModal(m),
+    setTwist:(k)=>setG(s=>{
+      if(!s||s.phase!=='wheel')return s;
+      let tw=k;if(k==='surprise')tw=pick(['double','sudden','reverse','category','impossible','steal']);
+      let cat=null;
+      if(tw==='category'){
+        const used=new Set(s.used);const opts=TWIST_CATS.filter(c=>buildSegments({db,removedSet,filters:s.cfg,used,twist:'category',twistCat:c}).segs.length>=3);
+        cat=opts.length?pick(opts):pick(TWIST_CATS);
+      }
+      Sfx.pop();return Object.assign({},s,{twist:tw,twistCat:cat});
+    }),
+    pick:(movie,recycleIds)=>setG(s=>{
+      if(!s||s.phase!=='wheel')return s;
+      let used=s.used;if(recycleIds){const r=new Set(recycleIds);used=used.filter(id=>!r.has(id));}
+      const total=turnTotalMs(s.twist,s.cfg.duration);
+      return Object.assign({},s,{phase:'selected',movie,used:used.concat([movie.id]),total,left:total,skipped:false,notice:recycleIds?'Pool refilled':'',resumePaused:false,nonce:s.nonce+1});
+    }),
+    startActing:()=>setG(s=>Object.assign({},s,{phase:'acting',left:s.total,resumePaused:false,nonce:s.nonce+1})),
+    syncLeft:(l)=>setG(s=>s&&s.phase==='acting'?Object.assign({},s,{left:l}):s),
+    correct:(leftMs)=>{Sfx.correct();setG(s=>{
+      if(!s||s.phase!=='acting')return s;
+      const before=Object.assign({},s,{left:leftMs});
+      const {pts,bonus}=calcCorrect ✓(s.twist,s.total-leftMs);const ti=curTeamIdx(s);
+      const teams=s.teams.map((t,i)=>i===ti?Object.assign({},t,{score:t.score+pts,played:t.played+1}):t);
+      return withHist(before,Object.assign({},s,{left:leftMs,teams,turn:s.turn+1,phase:'result',last:{kind:'correct',pts,bonus,twist:s.twist,team:ti,movie:s.movie,steal:null}}));
+    });},
+    fail:(leftMs)=>{Sfx.fail();setG(s=>{
+      if(!s||s.phase!=='acting')return s;
+      const before=Object.assign({},s,{left:leftMs});
+      const ti=curTeamIdx(s);let pen=0;if(s.twist==='sudden')pen=-5;if(s.twist==='steal')pen=-5;
+      const teams=s.teams.map((t,i)=>i===ti?Object.assign({},t,{score:t.score+pen,played:t.played+1}):t);
+      const canSteal=(s.cfg.steal||s.twist==='steal')&&s.teams.length>1;
+      return withHist(before,Object.assign({},s,{left:leftMs,teams,turn:s.turn+1,phase:canSteal?'steal':'result',last:{kind:'fail',pts:pen,bonus:0,twist:s.twist,team:ti,movie:s.movie,steal:null}}));
+    });},
+    steal:(teamId)=>setG(s=>{
+      if(!s||s.phase!=='steal')return s;
+      const pts=s.twist==='steal'?10:5;
+      const teams=teamId==null?s.teams:s.teams.map(t=>t.id===teamId?Object.assign({},t,{score:t.score+pts}):t);
+      return withHist(s,Object.assign({},s,{teams,phase:'result',last:Object.assign({},s.last,{steal:{team:teamId,pts}})}));
+    }),
+    skip:(leftMs)=>setG(s=>{
+      if(!s||(s.phase!=='acting'&&s.phase!=='selected'))return s;
+      const before=Object.assign({},s,{left:leftMs==null?s.left:leftMs});
+      const ti=curTeamIdx(s);
+      const teams=s.teams.map((t,i)=>i===ti?Object.assign({},t,{score:t.score-2,skips:t.skips+1}):t);
+      return withHist(before,Object.assign({},s,{teams,phase:'wheel',movie:null,skipped:true,resumePaused:false,nonce:s.nonce+1}));
+    }),
+    next:()=>setG(s=>{
+      if(!s||s.phase!=='result')return s;
+      if(s.turn>=totalTurns(s))return Object.assign({},s,{phase:'end'});
+      return Object.assign({},s,{phase:'wheel',movie:null,twist:'normal',twistCat:null,skipped:false,notice:'',nonce:s.nonce+1});
+    }),
+    undo:()=>setG(s=>{
+      if(!s||!s.history.length)return s;
+      const snap=s.history[s.history.length-1];
+      return Object.assign({},snap,{history:s.history.slice(0,-1),resumePaused:snap.phase==='acting',nonce:s.nonce+1});
+    }),
+    restart:()=>setG(s=>s?resetScores(s):s),
+    playAgain:()=>setG(s=>s?resetScores(s):s),
+    newGame:()=>{setModal(null);setG(null);setScreen('setup');lsDel(SAVE_KEY);},
+    setCfg:(o)=>setG(s=>s?Object.assign({},s,{cfg:Object.assign({},s.cfg,o),nonce:s.nonce+1}):s)
+  }),[db,removedSet]);
+
+  const canUndo=g&&g.history.length>0&&g.phase!=='end';
+  const onToggleMovie=(id)=>setRemoved(r=>r.includes(id)?r.filter(x=>x!==id):r.concat([id]));
+  const onDeleteMovie=(id)=>setCustom(c=>c.filter(m=>m.id!==id));
+  const onAddMovie=(o)=>setCustom(c=>c.concat([{id:'custom-'+slug(o.title)+'-'+Date.now(),title:o.title,year:o.year,genre:o.genre,cult:false,diff:o.diff,custom:true}]));
+
+  const stageKey=g?g.phase+'-'+g.turn+'-'+g.nonce:'setup';
+  return html`
+    <${Fragment}>
+      <div class="beams" aria-hidden="true"></div>
+      ${screen==='setup'||!g?html`<${Setup} cfg=${cfg} setCfg=${setCfg} onStart=${startGame} pool=${pool} saved=${saved} onResume=${resume} onDiscard=${discard} openMovies=${()=>setModal('movies')} dbCount=${db.length-removedSet.size}/>`:html`
+      <div class="relative z-10 max-w-6xl mx-auto py-4">
+        <header class="flex items-center justify-between gap-3 mb-5 flex-wrap">
+          <div class="flex items-baseline gap-3 min-w-0"><div class="display text-2xl gold-text">🪔 DIWALI WHEEL</div>
+            <div class="mono text-[.68rem] text-[var(--mute)] hidden sm:block">${g.phase==='end'?'Final results':'Round '+(Math.min(Math.floor(g.turn/g.teams.length)+1,g.cfg.rounds))+' of '+g.cfg.rounds}</div></div>
+          <div class="flex items-center gap-2">
+            <button class="btn btn-ghost btn-sm" onClick=${()=>act.undo()} disabled=${!canUndo} aria-label="Undo last scoring action"><${Icon} d=${IC.undo} size=${16}/><span class="hidden sm:inline">Undo</span></button>
+            <button class="btn btn-ghost btn-sm" onClick=${()=>setModal('movies')} aria-label="Movie library 🎬"><${Icon} d=${IC.film} size=${16}/><span class="hidden sm:inline">Movies</span></button>
+            <button class="btn btn-ghost btn-sm" onClick=${()=>setMuted(m=>!m)} aria-label=${muted?'Unmute sound':'Mute sound'} aria-pressed=${muted}><${Icon} d=${muted?IC.mute:IC.vol} size=${16}/></button>
+            <button class="btn btn-ghost btn-sm" onClick=${()=>setModal('settings')} aria-label="Party settings"><${Icon} d=${IC.cog} size=${16}/></button>
+          </div>
+        </header>
+        ${g.phase!=='end'&&html`<div class="lg:hidden flex gap-2 overflow-x-auto scroll-thin pb-3 mb-3" aria-label="Scores">${g.teams.map(t=>html`<div key=${t.id} class="glass px-3 py-1.5 flex-none flex items-center gap-2" style=${{borderRadius:'999px',borderColor:t.id===(g.phase==='result'||g.phase==='steal'?g.last.team:curTeamIdx(g))?teamColor(t.id):'var(--line)'}}><span style=${{width:'.55rem',height:'.55rem',borderRadius:'50%',background:teamColor(t.id)}}></span><span class="text-sm font-semibold whitespace-nowrap">${t.name}</span><span class="mono font-bold">${t.score}</span></div>`)}</div>`}
+        <div class=${g.phase==='end'?'':'grid gap-6 lg:grid-cols-[minmax(0,1fr)_21rem] items-start'}>
+          <main class="min-w-0 pb-6">
+            <${AnimatePresence} mode="wait">
+              <${motion.div} key=${stageKey} ...${stageAnim}>
+                ${g.phase==='wheel'&&html`<${WheelStage} g=${g} act=${act} db=${db} removedSet=${removedSet}/>`}
+                ${g.phase==='selected'&&html`<${SelectedStage} g=${g} act=${act}/>`}
+                ${g.phase==='acting'&&html`<${ActingStage} g=${g} act=${act}/>`}
+                ${g.phase==='steal'&&html`<${StealStage} g=${g} act=${act}/>`}
+                ${g.phase==='result'&&html`<${ResultStage} g=${g} act=${act}/>`}
+                ${g.phase==='end'&&html`<${EndStage} g=${g} act=${act}/>`}
+              <//>
+            <//>
+          </main>
+          ${g.phase!=='end'&&html`<aside class="min-w-0 lg:sticky lg:top-4"><${Scoreboard} g=${g}/></aside>`}
+        </div>
+      </div>`}
+      ${modal==='movies'&&html`<${MovieManager} db=${db} removedSet=${removedSet} onToggle=${onToggleMovie} onDelete=${onDeleteMovie} onAdd=${onAddMovie} onResetRemoved=${()=>setRemoved([])} onClose=${()=>setModal(null)}/>`}
+      ${modal==='settings'&&g&&html`<${SettingsModal} g=${g} setCfg=${act.setCfg} onClose=${()=>setModal(null)} onRestart=${act.restart} onNewGame=${act.newGame}/>`}
+    <//>`;
+}
+
+
+/* ===== Diwali fireworks particles ===== */
+(function(){
+  const layer = document.getElementById('fw-layer');
+  if(!layer) return;
+  const colors = ['#ffc94a','#ff8c1a','#ff3d6e','#9b2cff','#fff','#ff6b35','#ffe28a'];
+  function spawn(){
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const n = 10 + Math.floor(Math.random()*8);
+    const ox = 10 + Math.random()*80;
+    const oy = 15 + Math.random()*50;
+    for(let i=0;i<n;i++){
+      const el = document.createElement('div');
+      el.className = 'fw';
+      const angle = Math.random()*Math.PI*2;
+      const dist = 40 + Math.random()*120;
+      el.style.left = ox + '%';
+      el.style.top = oy + '%';
+      el.style.background = colors[Math.floor(Math.random()*colors.length)];
+      el.style.setProperty('--tx', Math.cos(angle)*dist + 'px');
+      el.style.setProperty('--ty', Math.sin(angle)*dist + 'px');
+      el.style.animationDelay = (Math.random()*0.3) + 's';
+      el.style.width = el.style.height = (2 + Math.random()*4) + 'px';
+      layer.appendChild(el);
+      setTimeout(()=>el.remove(), 3000);
+    }
+  }
+  setInterval(spawn, 1800);
+  setTimeout(spawn, 400);
+})();
+
+ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));
+})();
+</script>
+
+</body></html>
